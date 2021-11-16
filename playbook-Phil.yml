@@ -51,12 +51,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 4a59ebbf-ff8e-4abe-8724-bafe855f16d1
+      id: 41b2aac8-77fb-4b51-84b9-5864f3ae745a
       iscommand: false
-      name: This works!
+      name: Second Demo
       type: title
       version: -1
-    taskid: 4a59ebbf-ff8e-4abe-8724-bafe855f16d1
+    taskid: 41b2aac8-77fb-4b51-84b9-5864f3ae745a
     timertriggers: []
     type: title
     view: |-
