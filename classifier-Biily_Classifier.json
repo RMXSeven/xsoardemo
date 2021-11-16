@@ -1,0 +1,39 @@
+{
+	"brands": null,
+	"defaultIncidentType": "",
+	"description": "",
+	"feed": false,
+	"fromServerVersion": "",
+	"id": "d5d2f3a0-6d2a-42ed-8fd4-09bddd6848b1",
+	"incidentSamples": null,
+	"indicatorSamples": null,
+	"instanceIds": null,
+	"itemVersion": "",
+	"keyTypeMap": {
+		"Malware": "Billy The Bookcase",
+		"Phishing": "Billy The Bookcase",
+		"Sample Incident - Malware": "Billy The Bookcase",
+		"Sample Incident - Phishing": "Billy The Bookcase",
+		"Sample Incident - Unclassified": "Billy The Bookcase",
+		"Unclassified": "Billy The Bookcase"
+	},
+	"locked": false,
+	"logicalVersion": 2,
+	"mapping": null,
+	"name": "Biily Classifier",
+	"nameRaw": "Biily Classifier",
+	"packID": "",
+	"propagationLabels": [
+		"all"
+	],
+	"sourceClassifierId": "",
+	"system": false,
+	"toServerVersion": "",
+	"transformer": {
+		"complex": null,
+		"simple": "type"
+	},
+	"type": "classification",
+	"unclassifiedCases": null,
+	"version": -1
+}
