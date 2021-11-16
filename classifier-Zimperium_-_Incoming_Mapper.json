@@ -1,0 +1,110 @@
+{
+	"brands": null,
+	"defaultIncidentType": "",
+	"description": "Maps incoming Zimperium incident fields.",
+	"feed": false,
+	"fromServerVersion": "6.0.0",
+	"id": "Zimperium-mapper",
+	"incidentSamples": null,
+	"indicatorSamples": null,
+	"instanceIds": null,
+	"itemVersion": "1.1.0",
+	"keyTypeMap": null,
+	"locked": false,
+	"logicalVersion": 0,
+	"mapping": {
+		"Zimperium Event": {
+			"dontMapEventToLabels": false,
+			"internalMapping": {
+				"App": {
+					"complex": {
+						"accessor": "",
+						"filters": [],
+						"root": "appName",
+						"transformers": []
+					},
+					"simple": ""
+				},
+				"Device Hash": {
+					"complex": {
+						"accessor": "",
+						"filters": [],
+						"root": "deviceHash",
+						"transformers": []
+					},
+					"simple": ""
+				},
+				"First Name": {
+					"complex": {
+						"accessor": "",
+						"filters": [],
+						"root": "firstName",
+						"transformers": []
+					},
+					"simple": ""
+				},
+				"Last Name": {
+					"complex": {
+						"accessor": "",
+						"filters": [],
+						"root": "lastName",
+						"transformers": []
+					},
+					"simple": ""
+				},
+				"Mobile Device Model": {
+					"complex": {
+						"accessor": "",
+						"filters": [],
+						"root": "deviceModel",
+						"transformers": []
+					},
+					"simple": ""
+				},
+				"OS": {
+					"complex": {
+						"accessor": "",
+						"filters": [],
+						"root": "osType",
+						"transformers": []
+					},
+					"simple": ""
+				},
+				"OS Version": {
+					"complex": {
+						"accessor": "",
+						"filters": [],
+						"root": "osVersion",
+						"transformers": []
+					},
+					"simple": ""
+				},
+				"Phone Number": {
+					"complex": {
+						"accessor": "",
+						"filters": [],
+						"root": "userPhoneNumber",
+						"transformers": []
+					},
+					"simple": ""
+				}
+			}
+		}
+	},
+	"name": "Zimperium - Incoming Mapper",
+	"nameRaw": "Zimperium - Incoming Mapper",
+	"packID": "Zimperium",
+	"packPropagationLabels": [
+		"all"
+	],
+	"sourceClassifierId": "",
+	"system": true,
+	"toServerVersion": "",
+	"transformer": {
+		"complex": null,
+		"simple": ""
+	},
+	"type": "mapping-incoming",
+	"unclassifiedCases": null,
+	"version": -1
+}
