@@ -1,0 +1,867 @@
+category: Data Enrichment & Threat Intelligence
+commonfields:
+  id: Palo Alto Networks Threat Vault
+  version: -1
+configuration:
+- additionalinfo: TIM customers that upgraded to version 6.2 or above, can have this
+    value pre-configured in their main account so no additional input is needed. To
+    use this feature, upgrade your license so it includes the license key.
+  display: API Key
+  name: api_key
+  required: false
+  type: 4
+- display: Trust any certificate (not secure)
+  name: insecure
+  required: false
+  type: 8
+- display: Use system proxy settings
+  name: proxy
+  required: false
+  type: 8
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: 5.0.0
+    itemVersion: 1.0.9
+    packID: PaloAltoNetworks_Threat_Vault
+    packPropagationLabels:
+    - all
+    propagationLabels: []
+    toServerVersion: ""
+description: Use the Palo Alto Networks Threat Vault to research the latest threats
+  (vulnerabilities/exploits, viruses, and spyware) that Palo Alto Networks next-generation
+  firewalls can detect and prevent.
+detaileddescription: "#### Note: The Threat Vault API key is the same as the Auto
+  Focus API key.\n\n## Get Your API Key\nTo get your API key, you need to add an authorization
+  code, and then activate the API.\n\n ### Add your authorization code\n  1. Go to
+  the [Palo Alto Networks support site](https://support.paloaltonetworks.com).\n  2.
+  From the left-side navigation menu, select **Assets > Site Licenses**.\n  3. Click
+  the **Add Site License** button.\n  4. Enter the authorization code.\n  \n ### Activate
+  the API\n  1. From the **Site Licenses** page, click **Enable**.\n  2. Select the
+  **API Key** link.\n\n  Enter this API key when configuring the AutoFocus integration
+  in Cortex XSOAR.\n  For more info on activating the license, see [Activating AutoFocus
+  Licenses](https://docs.paloaltonetworks.com/autofocus/autofocus-admin/get-started-with-autofocus/activate-autofocus-licenses.html).\n\n\n---\n[View
+  Integration Documentation](https://xsoar.pan.dev/docs/reference/integrations/palo-alto-networks-threat-vault)"
+display: Palo Alto Networks Threat Vault
+image: data:image/png;base64,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
+name: Palo Alto Networks Threat Vault
+script:
+  commands:
+  - arguments:
+    - description: The SHA256 hash of the antivirus signature.
+      name: sha256
+    - description: The signature ID of the antivirus.
+      name: signature_id
+    description: Gets the antivirus signature.
+    name: threatvault-antivirus-signature-get
+    outputs:
+    - contextPath: ThreatVault.Antivirus.active
+      description: Whether the antivirus signature is active.
+      type: Bool
+    - contextPath: ThreatVault.Antivirus.category
+      description: The category of the antivirus signature.
+      type: String
+    - contextPath: ThreatVault.Antivirus.createTime
+      description: The time the antivirus signature was created.
+      type: String
+    - contextPath: ThreatVault.Antivirus.release
+      description: The release details of the antivirus signature.
+      type: Unknown
+    - contextPath: ThreatVault.Antivirus.sha256
+      description: The sha256 hash of the antivirus signature.
+      type: String
+    - contextPath: ThreatVault.Antivirus.signatureId
+      description: The ID of the antivirus signature.
+      type: Number
+    - contextPath: ThreatVault.Antivirus.signatureName
+      description: The name of the antivirus signature.
+      type: String
+  - arguments:
+    - default: true
+      description: The SHA256 hash of the antivirus signature.
+      isArray: true
+      name: file
+    description: Checks the reputation of an antivirus in Threat Vault.
+    name: file
+    outputs:
+    - contextPath: DBotScore.Vendor
+      description: The vendor used to calculate the score.
+      type: String
+    - contextPath: DBotScore.Score
+      description: The actual score.
+      type: Number
+    - contextPath: DBotScore.Type
+      description: The indicator type.
+      type: String
+    - contextPath: DBotScore.Indicator
+      description: The indicator that was tested.
+      type: String
+    - contextPath: File.MD5
+      description: The MD5 hash of the file.
+      type: String
+    - contextPath: File.SHA1
+      description: The SHA1 hash of the file.
+      type: String
+    - contextPath: File.SHA256
+      description: The SHA256 hash of the file.
+      type: String
+    - contextPath: File.Malicious.Vendor
+      description: For malicious files, the vendor that made the decision.
+      type: String
+  - arguments:
+    - description: The ID of the DNS signature.
+      name: dns_signature_id
+    description: Gets the DNS signature. For more details see the integration README.
+    name: threatvault-dns-signature-get-by-id
+    outputs:
+    - contextPath: ThreatVault.DNS.active
+      description: Whether the DNS signature is active.
+      type: Bool
+    - contextPath: ThreatVault.DNS.category
+      description: The category of the DNS signature.
+      type: String
+    - contextPath: ThreatVault.DNS.createTime
+      description: The time the DNS signature was created.
+      type: String
+    - contextPath: ThreatVault.DNS.domainName
+      description: The domain name of the DNS signature.
+      type: String
+    - contextPath: ThreatVault.DNS.release
+      description: The release details of the DNS signature.
+      type: Unknown
+    - contextPath: ThreatVault.DNS.signatureId
+      description: The ID of the DNS signature.
+      type: Number
+    - contextPath: ThreatVault.DNS.signatureName
+      description: The name of the DNS signature.
+      type: String
+  - arguments:
+    - description: ID of the antispyware signature.
+      name: signature_id
+    description: Gets the antispyware signature. For more details see the integration
+      README.
+    name: threatvault-antispyware-signature-get-by-id
+    outputs:
+    - contextPath: ThreatVault.AntiSpyware.firstReleaseVersion
+      description: The first released version of the antispyware.
+      type: Number
+    - contextPath: ThreatVault.AntiSpyware.signatureName
+      description: The name of the antispyware signature.
+      type: String
+    - contextPath: ThreatVault.AntiSpyware.firstReleaseTime
+      description: The time the antispyware was first released.
+      type: AntiSpyware
+    - contextPath: ThreatVault.AntiSpyware.vendor
+      description: The antispyware vendor.
+      type: String
+    - contextPath: ThreatVault.AntiSpyware.latestReleaseTime
+      description: The latest release time of the antispyware.
+      type: String
+    - contextPath: ThreatVault.AntiSpyware.metadata
+      description: The metadata of the antispyware.
+      type: Unknown
+    - contextPath: ThreatVault.AntiSpyware.signatureType
+      description: The signature type of the antispyware.
+      type: String
+    - contextPath: ThreatVault.AntiSpyware.cve
+      description: The status of the antispyware CVE.
+      type: String
+    - contextPath: ThreatVault.AntiSpyware.status
+      description: The status of the antispyware.
+      type: String
+    - contextPath: ThreatVault.AntiSpyware.signatureId
+      description: The antispyware signature ID.
+      type: Number
+    - contextPath: ThreatVault.AntiSpyware.latestReleaseVersion
+      description: The latest released version of the antispyware.
+      type: Number
+  - arguments:
+    - description: The IP address to search.
+      isArray: true
+      name: ip
+    description: Get the IP address geolocation.
+    name: threatvault-ip-geo-get
+    outputs:
+    - contextPath: ThreatVault.IP.CountryCode
+      description: The country code.
+      type: String
+    - contextPath: ThreatVault.IP.CountryName
+      description: The country name.
+      type: String
+    - contextPath: ThreatVault.IP.ipAddress
+      description: The IP address.
+      type: String
+  - arguments:
+    - default: true
+      description: IP address to query, e.g., !ip 1.1.1.1
+      isArray: true
+      name: ip
+    description: Check IP location.
+    name: ip
+    outputs:
+    - contextPath: IP.Address
+      description: The IP address.
+      type: String
+    - contextPath: IP.Geo.Country
+      description: The country of the IP address.
+      type: String
+    - contextPath: DBotScore.Vendor
+      description: The vendor used to calculate the score.
+      type: String
+    - contextPath: DBotScore.Score
+      description: The actual score.
+      type: Number
+    - contextPath: DBotScore.Type
+      description: The indicator type.
+      type: String
+    - contextPath: DBotScore.Indicator
+      description: The indicator that was tested.
+      type: String
+  - arguments:
+    - description: The signature name to search.
+      name: signature_name
+      required: true
+    - description: From which signature to return results. Default is 0.
+      name: from
+    - description: To which signature to return results. Default is from plus 10.
+      name: to
+    description: Initiates an antivirus signature search.
+    name: threatvault-antivirus-signature-search
+    outputs:
+    - contextPath: ThreatVault.Search.search_request_id
+      description: The ID that was searched.
+      type: String
+    - contextPath: ThreatVault.Search.status
+      description: The status of the search.
+      type: String
+  - arguments:
+    - description: The signature name to search.
+      name: signature_name
+    - description: The domain name to search.
+      name: domain_name
+    - description: From which signature to return results. Default is 0.
+      name: from
+    - description: To which signature to return results. Default is from plus 10.
+      name: to
+    description: Initiates a DNS signature search.
+    name: threatvault-dns-signature-search
+    outputs:
+    - contextPath: ThreatVault.Search.search_request_id
+      description: The ID to search.
+      type: String
+    - contextPath: ThreatVault.Search.status
+      description: The status of the search.
+      type: String
+  - arguments:
+    - description: The signature name to search.
+      name: signature_name
+    - description: The vendor name to search.
+      name: vendor
+    - description: The CVE name to search.
+      name: cve
+    - description: From which signature to return results. Default is 0.
+      name: from
+    - description: To which signature to return results. Default is from plus 10.
+      name: to
+    description: Initiates an antispyware signature search.
+    name: threatvault-antispyware-signature-search
+    outputs:
+    - contextPath: ThreatVault.Search.search_request_id
+      description: The ID to search.
+      type: String
+    - contextPath: ThreatVault.Search.status
+      description: The status of the search.
+      type: String
+  - arguments:
+    - description: The ID to search.
+      name: search_request_id
+      required: true
+    - auto: PREDEFINED
+      description: Search type. "ips" for antispyware, "dns" for DNS, and "panav"
+        for antivirus.
+      name: search_type
+      predefined:
+      - ips
+      - dns
+      - panav
+      required: true
+    description: Initiates an antispyware signature search.
+    name: threatvault-signature-search-results
+    outputs:
+    - contextPath: ThreatVault.Search.search_request_id
+      description: The ID that was searched.
+      type: String
+    - contextPath: ThreatVault.Search.status
+      description: The status of the search.
+      type: String
+    - contextPath: ThreatVault.Search.page_count
+      description: The number of results returned in this specific search.
+      type: Number
+    - contextPath: ThreatVault.Search.total_count
+      description: The number of results available for this specific search.
+      type: Number
+    - contextPath: ThreatVault.Search.search_type
+      description: The search type. Can be either "ips", "dns". or "panav".
+      type: String
+    - contextPath: ThreatVault.Searchf.signatures
+      description: A list of all the signatures found for this specific search.
+      type: Unknown
+  dockerimage: demisto/python3:3.9.7.24076
+  runonce: false
+  script: |2
+
+
+    # Disable insecure warnings
+    requests.packages.urllib3.disable_warnings()
+
+
+    class Client(BaseClient):
+        """
+        Client to use in the Threat Vault integration. Overrides BaseClient.
+        """
+
+        def __init__(self, api_key: str, verify: bool, proxy: bool):
+            super().__init__(base_url='https://autofocus.paloaltonetworks.com/api/intel/v1', verify=verify, proxy=proxy,
+                             headers={'Content-Type': 'application/json'})
+            self._params = {'api_key': api_key}
+            self.name = 'ThreatVault'
+
+        @logger
+        def antivirus_signature_get_request(self, sha256: str = '', signature_id: str = '') -> dict:
+            """Get antivirus signature by sending a GET request.
+
+            Args:
+                sha256: antivirus sha256.
+                signature_id: signature ID.
+            Returns:
+                Response from API.
+            """
+            if (sha256 and signature_id) or (not sha256 and not signature_id):
+                raise Exception('Please submit a sha256 or a signature_id.')
+            if signature_id:
+                suffix = f'/threatvault/panav/signature/{signature_id}'
+            else:
+                suffix = f'/file/{sha256}/signature'
+
+            return self._http_request(method='GET', url_suffix=suffix, params=self._params)
+
+        @logger
+        def dns_signature_get_request(self, dns_signature_id: str) -> dict:
+            """Get DNS signature by sending a GET request.
+
+            Args:
+                dns_signature_id: DNS signature ID.
+            Returns:
+                Response from API.
+            """
+            return self._http_request(method='GET', url_suffix=f'/threatvault/dns/signature/{dns_signature_id}',
+                                      params=self._params)
+
+        @logger
+        def antispyware_get_by_id_request(self, signature_id: str) -> dict:
+            """Get DNS signature by sending a GET request.
+
+            Args:
+                signature_id: signature ID.
+            Returns:
+                Response from API.
+            """
+            return self._http_request(method='GET', url_suffix=f'/threatvault/ips/signature/{signature_id}',
+                                      params=self._params)
+
+        @logger
+        def ip_geo_get_request(self, ip_: str) -> dict:
+            """Get IP geolocation by sending a GET request.
+
+            Args:
+                ip_: ip address.
+            Returns:
+                Response from API.
+            """
+            return self._http_request(method='GET', url_suffix=f'/ip/{ip_}/geolocation', params=self._params)
+
+        @logger
+        def search_request(self, path: str, from_: int, to_: int, signature_name: str = '', domain_name: str = '',
+                           vendor: str = '', cve: str = '') -> dict:
+            """Initiate a search by sending a POST request.
+
+            Args:
+                path: API endpoint path to search.
+                from_: from which signature to return results.
+                to_: to which signature to return results.
+                signature_name: signature name.
+                domain_name: domain name.
+                vendor: vendor ID.
+                cve: cve ID.
+            Returns:
+                Response from API.
+            """
+            if path == 'dns':  # DNS search
+                if signature_name and domain_name:
+                    raise Exception('Please provide either a signature_name or a domain_name.')
+            elif path == 'ips':  # Anti spyware search
+                if (cve and (vendor or signature_name)) or (vendor and (cve or signature_name)) \
+                        or (signature_name and (cve or vendor)):
+                    raise Exception('Please provide either a signature_name or a cve or a vendor.')
+
+            data: Dict[str, Any] = {
+                'from': from_,
+                'size': to_ - from_
+            }
+            if signature_name:
+                data['field'] = 'signatureName'
+                data['value'] = signature_name
+            elif domain_name:
+                data['field'] = 'domainName'
+                data['value'] = domain_name
+            elif cve:
+                data['field'] = 'cve'
+                data['value'] = cve
+            else:  # vendor name
+                data['field'] = 'vendor'
+                data['value'] = vendor
+
+            return self._http_request(method='POST', url_suffix=f'/threatvault/{path}/search', params=self._params,
+                                      json_data=data)
+
+        @logger
+        def signature_search_results_request(self, search_type: str, search_request_id: str) -> dict:
+            """Get signature search results by sending a GET request.
+
+            Args:
+                search_type: search type.
+                search_request_id: signature id.
+            Returns:
+                Response from API.
+            """
+            return self._http_request(method='GET',
+                                      url_suffix=f'/threatvault/{search_type}/search/result/{search_request_id}',
+                                      params=self._params)
+
+
+    def antivirus_signature_get(client: Client, args: dict) -> CommandResults:
+        """Get antivirus signature.
+
+        Args:
+            client: Client object with request.
+            args: Usually demisto.args()
+
+        Returns:
+            CommandResults.
+        """
+        sha256 = str(args.get('sha256', ''))
+        signature_id = str(args.get('signature_id', ''))
+
+        try:
+            response = client.antivirus_signature_get_request(sha256, signature_id)
+            readable_output = tableToMarkdown(name="Antivirus:", t=response, removeNull=True)
+        except Exception as err:
+            if 'Error in API call [404] - Not Found' in str(err):
+                response = {}
+                readable_output = 'Antivirus signature was not found. Please try with a different sha256 or signature_id.'
+            else:
+                raise Exception(err)
+
+        return CommandResults(
+            outputs_prefix=f'{client.name}.Antivirus',
+            outputs_key_field='signatureId',
+            outputs=response,
+            readable_output=readable_output,
+            raw_response=response
+        )
+
+
+    def file_command(client: Client, args: Dict) -> List[CommandResults]:
+        """Get the reputation of a sha256 representing an antivirus
+        Args:
+            client: Client object with request.
+            args: Usually demisto.args()
+        Returns:
+            list of CommandResults.
+        """
+        sha256_list = argToList(args.get('file'))
+        command_results_list: List[CommandResults] = []
+
+        for sha256 in sha256_list:
+            try:
+                response = client.antivirus_signature_get_request(sha256)
+                dbot_score = Common.DBotScore(
+                    indicator=sha256,
+                    indicator_type=DBotScoreType.FILE,
+                    integration_name=client.name,
+                    score=Common.DBotScore.BAD
+                )
+                file = Common.File(
+                    sha256=sha256,
+                    dbot_score=dbot_score
+                )
+                readable_output = tableToMarkdown(name=f"SHA256 {sha256} Antivirus reputation:", t=response,
+                                                  removeNull=True)
+            except Exception as err:
+                if 'Error in API call [404] - Not Found' in str(err):
+                    response = {}
+                    dbot_score = Common.DBotScore(
+                        indicator=sha256,
+                        indicator_type=DBotScoreType.FILE,
+                        integration_name=client.name,
+                        score=Common.DBotScore.NONE
+                    )
+                    file = Common.File(
+                        sha256=sha256,
+                        dbot_score=dbot_score
+                    )
+                    readable_output = f"SHA256 {sha256} Antivirus reputation is unknown to Threat Vault."
+                else:
+                    raise Exception(err)
+
+            command_results = CommandResults(
+                outputs_prefix=f'{client.name}.Antivirus',
+                outputs_key_field='signatureId',
+                outputs=response,
+                readable_output=readable_output,
+                raw_response=response,
+                indicator=file
+            )
+            command_results_list.append(command_results)
+
+        return command_results_list
+
+
+    def dns_get_by_id(client: Client, args: dict) -> CommandResults:
+        """Get DNS signature.
+
+        Args:
+            client: Client object with request.
+            args: Usually demisto.args()
+
+        Returns:
+            CommandResults.
+        """
+        dns_signature_id = str(args.get('dns_signature_id', ''))
+
+        try:
+            response = client.dns_signature_get_request(dns_signature_id)
+            headers = ['signatureId', 'signatureName', 'domainName', 'createTime', 'category']
+            readable_output = tableToMarkdown(name="DNS Signature:", t=response, headers=headers, removeNull=True)
+        except Exception as err:
+            if 'Error in API call [404] - Not Found' in str(err):
+                response = {}
+                readable_output = 'DNS signature was not found. Please try with a different dns_signature_id.'
+            else:
+                raise Exception(err)
+
+        return CommandResults(
+            outputs_prefix=f'{client.name}.DNS',
+            outputs_key_field='signatureId',
+            outputs=response,
+            readable_output=readable_output,
+            raw_response=response
+        )
+
+
+    def antispyware_get_by_id(client: Client, args: dict) -> CommandResults:
+        """Get anti spyware signature.
+
+        Args:
+            client: Client object with request.
+            args: Usually demisto.args()
+
+        Returns:
+            CommandResults.
+        """
+        signature_id = str(args.get('signature_id', ''))
+
+        try:
+            response = client.antispyware_get_by_id_request(signature_id)
+            headers = ['signatureId', 'signatureName', 'signatureType', 'status', 'firstReleaseTime', 'latestReleaseTime']
+            readable_output = tableToMarkdown(name="Anti Spyware Signature:", t=response, headers=headers, removeNull=True)
+        except Exception as err:
+            if 'Error in API call [404] - Not Found' in str(err):
+                response = {}
+                readable_output = 'Anti spyware signature was not found. Please try with a different signature_id.'
+            else:
+                raise Exception(err)
+
+        return CommandResults(
+            outputs_prefix=f'{client.name}.AntiSpyware',
+            outputs_key_field='signatureId',
+            outputs=response,
+            readable_output=readable_output,
+            raw_response=response
+        )
+
+
+    def ip_geo_get(client: Client, args: dict) -> CommandResults:
+        """Get IP geo location.
+
+        Args:
+            client: Client object with request.
+            args: Usually demisto.args()
+
+        Returns:
+            CommandResults.
+        """
+        ip_ = str(args.get('ip', ''))
+
+        try:
+            response = client.ip_geo_get_request(ip_)
+            readable_output = tableToMarkdown(name="IP location:", t=response, removeNull=True)
+        except Exception as err:
+            if 'Error in API call [404] - Not Found' in str(err):
+                response = {}
+                readable_output = 'IP location was not found. Please try with a different IP.'
+            else:
+                raise Exception(err)
+
+        return CommandResults(
+            outputs_prefix=f'{client.name}.IP',
+            outputs_key_field='ipAddress',
+            outputs=response,
+            readable_output=readable_output,
+            raw_response=response
+        )
+
+
+    def ip_command(client: Client, args: dict) -> List[CommandResults]:
+        """Get IP geo location.
+
+        Args:
+            client: Client object with request.
+            args: Usually demisto.args()
+
+        Returns:
+            list of CommandResults.
+        """
+        ip_list = argToList(args.get('ip', ''))
+        command_results_list: List[CommandResults] = []
+        for ip_ in ip_list:
+            try:
+                response = client.ip_geo_get_request(ip_)
+                dbot_score = Common.DBotScore(
+                    indicator=ip_,
+                    indicator_type=DBotScoreType.IP,
+                    integration_name=client.name,
+                    score=Common.DBotScore.NONE
+                )
+                ip_obj = Common.IP(
+                    ip=ip_,
+                    dbot_score=dbot_score,
+                    geo_country=response.get('countryName'),
+                )
+                readable_output = tableToMarkdown(name="IP location:", t=response, removeNull=True)
+            except Exception as err:
+                if 'Error in API call [404] - Not Found' in str(err):
+                    response = {}
+                    dbot_score = Common.DBotScore(
+                        indicator=ip_,
+                        indicator_type=DBotScoreType.IP,
+                        integration_name=client.name,
+                        score=Common.DBotScore.NONE
+                    )
+                    ip_obj = Common.IP(
+                        ip=ip_,
+                        dbot_score=dbot_score
+                    )
+                    readable_output = 'IP location was not found. Please try with a different IP.'
+                else:
+                    raise Exception(err)
+
+            command_results = CommandResults(
+                outputs_prefix=f'{client.name}.IP',
+                outputs_key_field='ipAddress',
+                outputs=response,
+                readable_output=readable_output,
+                raw_response=response,
+                indicator=ip_obj
+            )
+            command_results_list.append(command_results)
+
+        return command_results_list
+
+
+    def antivirus_signature_search(client: Client, args: dict) -> CommandResults:
+        """Initiate antivirus signature search.
+
+        Args:
+            client: Client object with request.
+            args: Usually demisto.args()
+
+        Returns:
+            CommandResults.
+        """
+        signature_name = str(args.get('signature_name', ''))
+        from_ = int(args.get('from', 0))
+        to_ = from_ + int(args.get('to', 10))
+
+        response = client.search_request('panav', from_, to_, signature_name)
+
+        outputs = response
+        outputs.update({'search_type': 'panav', 'from': from_, 'to': to_})
+        readable_output = tableToMarkdown(name="Antivirus Signature Search:", t=outputs, removeNull=True)
+
+        return CommandResults(
+            outputs_prefix=f'{client.name}.Search',
+            outputs_key_field='search_request_id',
+            outputs=outputs,
+            readable_output=readable_output,
+            raw_response=response
+        )
+
+
+    def dns_signature_search(client: Client, args: dict) -> CommandResults:
+        """Initiate DNS signature search.
+
+        Args:
+            client: Client object with request.
+            args: Usually demisto.args()
+
+        Returns:
+            CommandResults.
+        """
+        signature_name = str(args.get('signature_name', ''))
+        from_ = int(args.get('from', 0))
+        to_ = from_ + int(args.get('to', 10))
+        domain_name = str(args.get('domain_name', ''))
+
+        response = client.search_request('dns', from_, to_, signature_name, domain_name=domain_name)
+
+        outputs = response
+        outputs.update({'search_type': 'dns', 'from': from_, 'to': to_})
+        readable_output = tableToMarkdown(name="DNS Signature Search:", t=outputs, removeNull=True)
+
+        return CommandResults(
+            outputs_prefix=f'{client.name}.Search',
+            outputs_key_field='search_request_id',
+            outputs=outputs,
+            readable_output=readable_output,
+            raw_response=response
+        )
+
+
+    def antispyware_signature_search(client: Client, args: dict) -> CommandResults:
+        """Initiate anti spyware signature search.
+
+        Args:
+            client: Client object with request.
+            args: Usually demisto.args()
+
+        Returns:
+            CommandResults.
+        """
+        signature_name = str(args.get('signature_name', ''))
+        from_ = int(args.get('from', 0))
+        to_ = from_ + int(args.get('to', 10))
+        vendor = str(args.get('vendor', ''))
+        cve = str(args.get('cve', ''))
+
+        response = client.search_request('ips', from_, to_, signature_name, vendor=vendor, cve=cve)
+
+        outputs = response
+        outputs.update({'search_type': 'ips', 'from': from_, 'to': to_})
+        readable_output = tableToMarkdown(name="Anti Spyware Signature Search:", t=outputs, removeNull=True)
+
+        return CommandResults(
+            outputs_prefix=f'{client.name}.Search',
+            outputs_key_field='search_request_id',
+            outputs=outputs,
+            readable_output=readable_output,
+            raw_response=response
+        )
+
+
+    def signature_search_results(client: Client, args: dict):
+        """Retrieve signature search results.
+
+        Args:
+            client: Client object with request.
+            args: Usually demisto.args()
+
+        Returns:
+            CommandResults.
+        """
+        search_request_id = str(args.get('search_request_id', ''))
+        search_type = str(args.get('search_type', ''))
+
+        try:
+            response = client.signature_search_results_request(search_type, search_request_id)
+
+            outputs = response
+            outputs.update({'search_request_id': search_request_id})
+            if response.get('status') == 'submitted':  # search was not completed
+                readable_output = f'Search {search_request_id} is still in progress.'
+            else:
+                headers = ['signatureId', 'signatureName', 'domainName', 'cve', 'signatureType', 'status', 'category',
+                           'firstReleaseTime', 'latestReleaseTime']
+                outputs.update({'status': 'completed'})
+                title = f'Signature search are showing {outputs.get("page_count")} of {outputs.get("total_count")} results:'
+                readable_output = tableToMarkdown(name=title, t=outputs.get('signatures'),
+                                                  headers=headers, removeNull=True)
+            return CommandResults(
+                outputs_prefix=f'{client.name}.Search',
+                outputs_key_field='search_request_id',
+                outputs=outputs,
+                readable_output=readable_output,
+                raw_response=response
+            )
+        except Exception as err:
+            if 'Not Found' in str(err):
+                return_warning(f'Search request ID {search_request_id} was not found.')
+            else:
+                raise
+
+
+    def test_module(client: Client, *_) -> str:
+        """Performs basic get request to get ip geo data.
+
+        Args:
+            client: Client object with request.
+
+        Returns:
+            string.
+        """
+        client.ip_geo_get_request(ip_='1.1.1.1')
+        return 'ok'
+
+
+    def main():
+        """
+            PARSE AND VALIDATE INTEGRATION PARAMS
+        """
+        params = demisto.params()
+        auto_focus_key_retriever = AutoFocusKeyRetriever(params.get('api_key'))
+
+        verify = not params.get('insecure', False)
+        proxy = params.get('proxy')
+
+        try:
+            command = demisto.command()
+            LOG(f'Command being called is {demisto.command()}')
+            client = Client(api_key=auto_focus_key_retriever.key, verify=verify, proxy=proxy)
+            commands = {
+                'threatvault-antivirus-signature-get': antivirus_signature_get,
+                'file': file_command,
+                'threatvault-dns-signature-get-by-id': dns_get_by_id,
+                'threatvault-antispyware-signature-get-by-id': antispyware_get_by_id,
+                'threatvault-ip-geo-get': ip_geo_get,
+                'ip': ip_command,
+                'threatvault-antivirus-signature-search': antivirus_signature_search,
+                'threatvault-dns-signature-search': dns_signature_search,
+                'threatvault-antispyware-signature-search': antispyware_signature_search,
+                'threatvault-signature-search-results': signature_search_results,
+            }
+            if demisto.command() == 'test-module':
+                # This is the call made when pressing the integration Test button.
+                return_results(test_module(client))
+            elif command in commands:
+                return_results(commands[command](client, demisto.args()))
+            else:
+                raise NotImplementedError(f'Command "{command}" was not implemented.')
+
+        except Exception as err:
+            return_error(str(err), err)
+
+
+    if __name__ in ('__main__', '__builtin__', 'builtins'):
+        main()
+  subtype: python3
+  type: python
+system: true
