@@ -1,0 +1,156 @@
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 066d74fb-c76c-42ae-8d3b-b7452aba0f5a
+inputs: []
+name: Wednesday is Awesome
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 43bb0aa0-4e73-4cff-8b05-3c12604e11bb
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 43bb0aa0-4e73-4cff-8b05-3c12604e11bb
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 50
+        }
+      }
+  "1":
+    conditions:
+    - condition:
+      - - left:
+            value:
+              simple: "yes"
+          operator: isEqualString
+          right:
+            value:
+              simple: "yes"
+      label: "yes"
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "3"
+      "yes":
+      - "2"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 04b321e5-e054-4633-8014-ec522ebe281c
+      iscommand: false
+      name: Did you enjoy this course
+      type: condition
+      version: -1
+    taskid: 04b321e5-e054-4633-8014-ec522ebe281c
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 220
+        }
+      }
+  "2":
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: I rated 5 stars
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: 7c8d5e84-74fd-4c6a-8107-29a6a9be8617
+      iscommand: false
+      name: Rate 5 stars
+      script: Print
+      type: regular
+      version: -1
+    taskid: 7c8d5e84-74fd-4c6a-8107-29a6a9be8617
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 160,
+          "y": 410
+        }
+      }
+  "3":
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 6b6a9193-2d15-49d3-8105-a6dd418c4f27
+      iscommand: false
+      name: End Playbook
+      type: title
+      version: -1
+    taskid: 6b6a9193-2d15-49d3-8105-a6dd418c4f27
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 460,
+          "y": 630
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 645,
+        "width": 680,
+        "x": 160,
+        "y": 50
+      }
+    }
+  }
