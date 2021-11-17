@@ -1,0 +1,35 @@
+{
+	"autorun": false,
+	"closureScript": "",
+	"color": "#D1FC40",
+	"days": 0,
+	"daysR": 0,
+	"default": false,
+	"detached": false,
+	"disabled": false,
+	"extractSettings": {
+		"fieldCliNameToExtractSettings": {},
+		"mode": "Specific"
+	},
+	"fromServerVersion": "",
+	"hours": 0,
+	"hoursR": 0,
+	"id": "Ping Incident",
+	"itemVersion": "",
+	"layout": "c62625ad-421a-4741-8441-29f8a6365253",
+	"locked": false,
+	"name": "Ping Incident",
+	"onChangeRepAlg": 0,
+	"packID": "",
+	"preProcessingScript": "",
+	"propagationLabels": [
+		"all"
+	],
+	"readonly": false,
+	"reputationCalc": 0,
+	"system": false,
+	"toServerVersion": "",
+	"version": -1,
+	"weeks": 0,
+	"weeksR": 0
+}
