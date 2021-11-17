@@ -1,0 +1,100 @@
+{
+	"author": "Cortex XSOAR",
+	"authorImage": "content/packs/Base/Author_image.png",
+	"beta": false,
+	"categories": [
+		"Utilities"
+	],
+	"certification": "certified",
+	"contentItemTypes": [
+		"integration"
+	],
+	"contentItems": {
+		"automation": null,
+		"classifier": null,
+		"dashboard": null,
+		"incidentfield": null,
+		"incidenttype": null,
+		"indicatorfield": null,
+		"integration": [
+			{
+				"category": "Utilities",
+				"commands": [
+					{
+						"description": "Returns the list of supported two-letter ISO language codes.",
+						"name": "gct-supported-languages"
+					},
+					{
+						"description": "Returns the translated text.",
+						"name": "gct-translate-text"
+					}
+				],
+				"description": "A Google API cloud based translation service.",
+				"name": "Google Cloud Translate"
+			}
+		],
+		"layoutscontainer": null,
+		"playbook": null,
+		"report": null,
+		"reputation": null,
+		"widget": null
+	},
+	"created": "2020-11-09T18:48:32Z",
+	"currentVersion": "1.0.2",
+	"dependencies": {
+		"Base": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.11.8",
+			"name": "Base"
+		}
+	},
+	"deprecated": false,
+	"description": "A Google API cloud based translation service.",
+	"downloads": 455,
+	"eulaLink": "https://github.com/demisto/content/blob/master/LICENSE",
+	"fromServerVersion": "5.0.0",
+	"general": [
+		"generalFieldCertified",
+		"generalFieldByCortexXSOAR",
+		"generalFieldFree",
+		"generalFieldSupportIncluded"
+	],
+	"id": "GoogleCloudTranslate",
+	"installMessage": "",
+	"integrations": [
+		{
+			"imagePath": "content/packs/GoogleCloudTranslate/GoogleCloudTranslate_image.png",
+			"name": "Google Cloud Translate"
+		}
+	],
+	"itemVersion": "1.0.2",
+	"keywords": [],
+	"legacy": true,
+	"name": "Google Cloud Translate",
+	"packID": "GoogleCloudTranslate",
+	"premium": false,
+	"previewOnly": false,
+	"price": 0,
+	"propagationLabels": [
+		"all"
+	],
+	"rawKeywords": null,
+	"rawTags": null,
+	"rawUseCases": null,
+	"searchRank": 10,
+	"serverMaxVersion": "",
+	"serverMinVersion": "5.0.0",
+	"support": "xsoar",
+	"supportDetails": {
+		"email": "",
+		"url": "https://www.paloaltonetworks.com/cortex"
+	},
+	"tags": [],
+	"toServerVersion": "",
+	"updated": "2021-06-01T11:24:28Z",
+	"useCases": [],
+	"version": -1,
+	"versionInfo": "372947"
+}
