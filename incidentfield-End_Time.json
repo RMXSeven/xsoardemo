@@ -18,7 +18,7 @@
 	"hidden": false,
 	"id": "incident_endtime",
 	"isReadOnly": false,
-	"itemVersion": "3.1.23",
+	"itemVersion": "3.1.24",
 	"locked": false,
 	"mergeStrategy": "",
 	"name": "End Time",
