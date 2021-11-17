@@ -1,0 +1,62 @@
+{
+	"brands": null,
+	"defaultIncidentType": "Unclassified",
+	"description": "",
+	"feed": false,
+	"fromServerVersion": "",
+	"id": "3260723e-c6d9-4e5f-8d21-2a47004a1d2d",
+	"incidentSamples": null,
+	"indicatorSamples": null,
+	"instanceIds": null,
+	"itemVersion": "",
+	"keyTypeMap": {
+		"dns": "DNS Incident",
+		"ping": "Ping Incident"
+	},
+	"locked": false,
+	"logicalVersion": 1,
+	"mapping": null,
+	"name": "Home Firewall classifier",
+	"nameRaw": "Home Firewall classifier",
+	"packID": "",
+	"propagationLabels": [
+		"all"
+	],
+	"sourceClassifierId": "",
+	"system": false,
+	"toServerVersion": "",
+	"transformer": {
+		"complex": {
+			"accessor": "",
+			"filters": [],
+			"root": "content",
+			"transformers": [
+				{
+					"args": {
+						"delimiter": {
+							"isContext": false,
+							"value": null
+						}
+					},
+					"operator": "splitAndTrim"
+				},
+				{
+					"args": {
+						"index": {
+							"isContext": false,
+							"value": {
+								"complex": null,
+								"simple": "13"
+							}
+						}
+					},
+					"operator": "atIndex"
+				}
+			]
+		},
+		"simple": ""
+	},
+	"type": "classification",
+	"unclassifiedCases": null,
+	"version": -1
+}
