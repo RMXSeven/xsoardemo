@@ -213,7 +213,7 @@
 	"formatScript": "",
 	"fromServerVersion": "5.5.0",
 	"id": "accountRep",
-	"itemVersion": "3.1.23",
+	"itemVersion": "3.1.24",
 	"layout": "accountRep",
 	"legacyNames": null,
 	"locked": false,
