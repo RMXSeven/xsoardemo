@@ -1,0 +1,157 @@
+{
+	"author": "Cortex XSOAR",
+	"authorImage": "content/packs/Base/Author_image.png",
+	"beta": false,
+	"categories": [
+		"Data Enrichment \u0026 Threat Intelligence"
+	],
+	"certification": "certified",
+	"contentItemTypes": [
+		"integration",
+		"playbook"
+	],
+	"contentItems": {
+		"automation": null,
+		"classifier": null,
+		"dashboard": null,
+		"incidentfield": null,
+		"incidenttype": null,
+		"indicatorfield": null,
+		"integration": [
+			{
+				"category": "Data Enrichment \u0026 Threat Intelligence",
+				"commands": [
+					{
+						"description": "Gets the antivirus signature.",
+						"name": "threatvault-antivirus-signature-get"
+					},
+					{
+						"description": "Checks the reputation of an antivirus in Threat Vault.",
+						"name": "file"
+					},
+					{
+						"description": "Gets the DNS signature. For more details see the integration README.",
+						"name": "threatvault-dns-signature-get-by-id"
+					},
+					{
+						"description": "Gets the antispyware signature. For more details see the integration README.",
+						"name": "threatvault-antispyware-signature-get-by-id"
+					},
+					{
+						"description": "Get the IP address geolocation.",
+						"name": "threatvault-ip-geo-get"
+					},
+					{
+						"description": "Check IP location.",
+						"name": "ip"
+					},
+					{
+						"description": "Initiates an antivirus signature search.",
+						"name": "threatvault-antivirus-signature-search"
+					},
+					{
+						"description": "Initiates a DNS signature search.",
+						"name": "threatvault-dns-signature-search"
+					},
+					{
+						"description": "Initiates an antispyware signature search.",
+						"name": "threatvault-antispyware-signature-search"
+					},
+					{
+						"description": "Initiates an antispyware signature search.",
+						"name": "threatvault-signature-search-results"
+					}
+				],
+				"description": "Use the Palo Alto Networks Threat Vault to research the latest threats (vulnerabilities/exploits, viruses, and spyware) that Palo Alto Networks next-generation firewalls can detect and prevent.",
+				"name": "Palo Alto Networks Threat Vault"
+			}
+		],
+		"layoutscontainer": null,
+		"playbook": [
+			{
+				"description": "Initiates a Signature Search in Palo Alto Networks threat Vault.",
+				"name": "PANW Threat Vault - Signature Search"
+			}
+		],
+		"report": null,
+		"reputation": null,
+		"widget": null
+	},
+	"created": "2020-11-11T19:11:47Z",
+	"currentVersion": "1.0.9",
+	"dependencies": {
+		"Base": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.13.38",
+			"name": "Base"
+		},
+		"CommonPlaybooks": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "2.0.6",
+			"name": "Common Playbooks"
+		},
+		"CommonScripts": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.4.44",
+			"name": "Common Scripts"
+		}
+	},
+	"deprecated": false,
+	"description": "Use the Palo Alto Networks Threat Vault to research the latest threats (vulnerabilities/exploits, viruses, and spyware) that Palo Alto Networks next-generation firewalls can detect and prevent.",
+	"downloads": 1508,
+	"eulaLink": "https://github.com/demisto/content/blob/master/LICENSE",
+	"fromServerVersion": "5.0.0",
+	"general": [
+		"generalFieldCertified",
+		"generalFieldByCortexXSOAR",
+		"generalFieldFree",
+		"generalFieldSupportIncluded"
+	],
+	"id": "PaloAltoNetworks_Threat_Vault",
+	"installMessage": "",
+	"integrations": [
+		{
+			"imagePath": "content/packs/PaloAltoNetworks_Threat_Vault/PaloAltoNetworksThreatVault_image.png",
+			"name": "Palo Alto Networks Threat Vault"
+		}
+	],
+	"itemVersion": "1.0.9",
+	"keywords": [
+		"logs",
+		"antispyware",
+		"antivirus",
+		"pan-os"
+	],
+	"legacy": true,
+	"name": "Palo Alto Networks Threat Vault",
+	"packID": "PaloAltoNetworks_Threat_Vault",
+	"premium": false,
+	"previewOnly": false,
+	"price": 0,
+	"propagationLabels": [
+		"all"
+	],
+	"rawKeywords": null,
+	"rawTags": null,
+	"rawUseCases": null,
+	"searchRank": 10,
+	"serverMaxVersion": "",
+	"serverMinVersion": "5.0.0",
+	"support": "xsoar",
+	"supportDetails": {
+		"email": "",
+		"url": "https://www.paloaltonetworks.com/cortex"
+	},
+	"tags": [],
+	"toServerVersion": "",
+	"updated": "2021-10-12T09:14:55Z",
+	"useCases": [],
+	"version": -1,
+	"versionInfo": "1782770"
+}
