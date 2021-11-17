@@ -1,5 +1,5 @@
 {
-	"autorun": false,
+	"autorun": true,
 	"closureScript": "",
 	"color": "#A3C9FF",
 	"days": 0,
@@ -21,6 +21,7 @@
 	"name": "Content Demo Incident",
 	"onChangeRepAlg": 0,
 	"packID": "",
+	"playbookId": "access_investigation_-_generic",
 	"preProcessingScript": "",
 	"propagationLabels": [
 		"all"
