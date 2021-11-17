@@ -1,0 +1,135 @@
+{
+	"author": "Cortex XSOAR",
+	"authorImage": "content/packs/Base/Author_image.png",
+	"beta": false,
+	"categories": [
+		"Utilities"
+	],
+	"certification": "certified",
+	"contentItemTypes": [
+		"integration"
+	],
+	"contentItems": {
+		"automation": null,
+		"classifier": null,
+		"dashboard": null,
+		"incidentfield": null,
+		"incidenttype": null,
+		"indicatorfield": null,
+		"integration": [
+			{
+				"category": "Utilities",
+				"commands": [
+					{
+						"description": "Downloads a file from the SMB server.",
+						"name": "smb-download"
+					},
+					{
+						"description": "Uploads a file to the SMB server.",
+						"name": "smb-upload"
+					}
+				],
+				"description": "Deprecated. Use the Server Message Block (SMB) v2 integration instead.",
+				"name": "Server Message Block (SMB) (Deprecated)"
+			},
+			{
+				"category": "Utilities",
+				"commands": [
+					{
+						"description": "Downloads a file from the server.",
+						"name": "smb-download"
+					},
+					{
+						"description": "Uploads a file to the server.",
+						"name": "smb-upload"
+					},
+					{
+						"description": "Returns a list containing the names of the entries in the directory given by path.",
+						"name": "smb-directory-list"
+					},
+					{
+						"description": "Removes a file from the server.",
+						"name": "smb-file-remove"
+					},
+					{
+						"description": "Creates a new directory under the given path.",
+						"name": "smb-directory-create"
+					},
+					{
+						"description": "Removes a directory from the given path.",
+						"name": "smb-directory-remove"
+					}
+				],
+				"description": "Files and Directories management with an SMB server. Supports SMB2 and SMB3 protocols.",
+				"name": "Server Message Block (SMB) v2"
+			}
+		],
+		"layoutscontainer": null,
+		"playbook": null,
+		"report": null,
+		"reputation": null,
+		"widget": null
+	},
+	"created": "2020-11-09T18:44:35Z",
+	"currentVersion": "2.0.5",
+	"dependencies": {
+		"Base": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.13.29",
+			"name": "Base"
+		}
+	},
+	"deprecated": false,
+	"description": "File exchange with an SMB server.",
+	"downloads": 1053,
+	"eulaLink": "https://github.com/demisto/content/blob/master/LICENSE",
+	"fromServerVersion": "5.0.0",
+	"general": [
+		"generalFieldCertified",
+		"generalFieldByCortexXSOAR",
+		"generalFieldFree",
+		"generalFieldSupportIncluded"
+	],
+	"id": "SMB",
+	"installMessage": "",
+	"integrations": [
+		{
+			"imagePath": "content/packs/SMB/ServerMessageBlock%28SMB%29_image.png",
+			"name": "Server Message Block (SMB) (Deprecated)"
+		},
+		{
+			"imagePath": "content/packs/SMB/ServerMessageBlock%28SMB%29v2_image.png",
+			"name": "Server Message Block (SMB) v2"
+		}
+	],
+	"itemVersion": "2.0.5",
+	"keywords": [],
+	"legacy": true,
+	"name": "Server Message Block (SMB)",
+	"packID": "SMB",
+	"premium": false,
+	"previewOnly": false,
+	"price": 0,
+	"propagationLabels": [
+		"all"
+	],
+	"rawKeywords": null,
+	"rawTags": null,
+	"rawUseCases": null,
+	"searchRank": 10,
+	"serverMaxVersion": "",
+	"serverMinVersion": "5.0.0",
+	"support": "xsoar",
+	"supportDetails": {
+		"email": "",
+		"url": "https://www.paloaltonetworks.com/cortex"
+	},
+	"tags": [],
+	"toServerVersion": "",
+	"updated": "2021-09-02T21:21:27Z",
+	"useCases": [],
+	"version": -1,
+	"versionInfo": "7423160"
+}
