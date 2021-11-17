@@ -103,7 +103,7 @@
 	"hidden": false,
 	"id": "incident_endpoint",
 	"isReadOnly": false,
-	"itemVersion": "3.1.23",
+	"itemVersion": "3.1.24",
 	"locked": false,
 	"mergeStrategy": "",
 	"name": "Endpoint",
