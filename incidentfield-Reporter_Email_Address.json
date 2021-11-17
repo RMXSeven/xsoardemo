@@ -18,7 +18,7 @@
 	"hidden": false,
 	"id": "incident_reporteremailaddress",
 	"isReadOnly": false,
-	"itemVersion": "2.5.0",
+	"itemVersion": "2.5.1",
 	"locked": false,
 	"mergeStrategy": "",
 	"name": "Reporter Email Address",
