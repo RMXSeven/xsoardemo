@@ -16,14 +16,6 @@
 	"contentItems": {
 		"automation": [
 			{
-				"description": "Can be used to find duplicate emails for incidents of type Phishing, including  malicious, spam, and legitimate emails.",
-				"name": "FindDuplicateEmailIncidents",
-				"tags": [
-					"ml",
-					"phishing"
-				]
-			},
-			{
 				"description": "Deprecated. Use the FindDuplicateEmailIncidents script instead.",
 				"name": "PhishingDedupPreprocessingRule",
 				"tags": [
@@ -41,6 +33,14 @@
 				]
 			},
 			{
+				"description": "Can be used to find duplicate emails for incidents of type Phishing, including  malicious, spam, and legitimate emails.",
+				"name": "FindDuplicateEmailIncidents",
+				"tags": [
+					"ml",
+					"phishing"
+				]
+			},
+			{
 				"description": "Checks the authenticity of an email based on the email's SPF, DMARC, and DKIM.",
 				"name": "CheckEmailAuthenticity",
 				"tags": [
@@ -54,39 +54,34 @@
 		"dashboard": null,
 		"incidentfield": [
 			{
+				"description": "A list of all of the email headers.",
+				"name": "Email Headers",
+				"type": "grid"
+			},
+			{
+				"description": "",
+				"name": "Attachment type",
+				"type": "shortText"
+			},
+			{
 				"description": "Phishing incident sub-type. Can be \"Spear Phishing\", \"Whaling\", \"Credential Harvesting\", \"Malware\", \"Scam\", or \"Automatic\".",
 				"name": "Phishing Sub-type",
 				"type": "multiSelect"
 			},
 			{
 				"description": "",
-				"name": "Email Body HTML",
-				"type": "html"
-			},
-			{
-				"description": "Classification of the email. Can be \"Legitimate\", \"Spam\", or \"Malicious\".",
-				"name": "Email Classification",
-				"type": "singleSelect"
-			},
-			{
-				"description": "",
-				"name": "Attachment Name",
-				"type": "shortText"
-			},
-			{
-				"description": "Indicates the authenticity of the email. This check is done using the CheckEmailAuthenticity script.",
-				"name": "Email Authenticity Check",
-				"type": "singleSelect"
-			},
-			{
-				"description": "",
-				"name": "Email Labels",
+				"name": "Email Source",
 				"type": "shortText"
 			},
 			{
 				"description": "",
-				"name": "Email BCC",
+				"name": "Email From",
 				"type": "shortText"
+			},
+			{
+				"description": "Bulk Complaint Level score (Microsoft headers)",
+				"name": "Phishing BCL Score",
+				"type": "number"
 			},
 			{
 				"description": "",
@@ -94,23 +89,13 @@
 				"type": "shortText"
 			},
 			{
-				"description": "",
-				"name": "Email Subject",
+				"description": "The email address of the user who reported the email.",
+				"name": "Reporter Email Address",
 				"type": "shortText"
 			},
 			{
-				"description": "A list of all of the email headers.",
-				"name": "Email Headers",
-				"type": "grid"
-			},
-			{
 				"description": "",
-				"name": "Email Body",
-				"type": "longText"
-			},
-			{
-				"description": "",
-				"name": "Attachment Hash",
+				"name": "Email URL Clicked",
 				"type": "shortText"
 			},
 			{
@@ -120,27 +105,32 @@
 			},
 			{
 				"description": "",
-				"name": "Email To Count",
+				"name": "Phishing Reporter Email Headers",
+				"type": "grid"
+			},
+			{
+				"description": "",
+				"name": "Email Labels",
 				"type": "shortText"
 			},
 			{
 				"description": "",
-				"name": "Email Body Format",
+				"name": "Email Client Name",
+				"type": "shortText"
+			},
+			{
+				"description": "Indicates the authenticity of the email. This check is done using the CheckEmailAuthenticity script.",
+				"name": "Email Authenticity Check",
+				"type": "singleSelect"
+			},
+			{
+				"description": "",
+				"name": "Email Received",
 				"type": "shortText"
 			},
 			{
 				"description": "",
-				"name": "Email Latest Message",
-				"type": "shortText"
-			},
-			{
-				"description": "",
-				"name": "Email HTML Image",
-				"type": "longText"
-			},
-			{
-				"description": "",
-				"name": "Email To",
+				"name": "Email BCC",
 				"type": "shortText"
 			},
 			{
@@ -155,12 +145,17 @@
 			},
 			{
 				"description": "",
-				"name": "Email Message ID",
+				"name": "Email To Count",
 				"type": "shortText"
 			},
 			{
 				"description": "",
-				"name": "Attachment Extension",
+				"name": "Attachment Count",
+				"type": "number"
+			},
+			{
+				"description": "",
+				"name": "Attachment Hash",
 				"type": "shortText"
 			},
 			{
@@ -170,78 +165,18 @@
 			},
 			{
 				"description": "",
+				"name": "Email Subject",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Attachment Extension",
+				"type": "shortText"
+			},
+			{
+				"description": "",
 				"name": "Email Keywords",
 				"type": "shortText"
-			},
-			{
-				"description": "",
-				"name": "Email HTML",
-				"type": "longText"
-			},
-			{
-				"description": "",
-				"name": "Email Received",
-				"type": "shortText"
-			},
-			{
-				"description": "Spam confidence level score (Microsoft headers)",
-				"name": "Phishing SCL Score",
-				"type": "number"
-			},
-			{
-				"description": "Phishing Confidence Level score (Microsoft headers)",
-				"name": "Phishing PCL Score",
-				"type": "number"
-			},
-			{
-				"description": "The email address of the user who reported the email.",
-				"name": "Reporter Email Address",
-				"type": "shortText"
-			},
-			{
-				"description": "",
-				"name": "Attachment type",
-				"type": "shortText"
-			},
-			{
-				"description": "",
-				"name": "Email From",
-				"type": "shortText"
-			},
-			{
-				"description": "",
-				"name": "Email Return Path",
-				"type": "shortText"
-			},
-			{
-				"description": "",
-				"name": "Email Client Name",
-				"type": "shortText"
-			},
-			{
-				"description": "",
-				"name": "Attachment size",
-				"type": "shortText"
-			},
-			{
-				"description": "",
-				"name": "Phishing Reporter Email Headers",
-				"type": "grid"
-			},
-			{
-				"description": "The confidence level, presented as a value between 0 and 1, of the predicted phishing sub-type verdict by the machine-learning model.",
-				"name": "DBotPredictionProbability",
-				"type": "number"
-			},
-			{
-				"description": "",
-				"name": "Email Source",
-				"type": "shortText"
-			},
-			{
-				"description": "Bulk Complaint Level score (Microsoft headers)",
-				"name": "Phishing BCL Score",
-				"type": "number"
 			},
 			{
 				"description": "Indicates the words in the text that contributed to the decision made by the machine-learning model.",
@@ -250,8 +185,28 @@
 			},
 			{
 				"description": "",
+				"name": "Email Body Format",
+				"type": "shortText"
+			},
+			{
+				"description": "Spam confidence level score (Microsoft headers)",
+				"name": "Phishing SCL Score",
+				"type": "number"
+			},
+			{
+				"description": "",
 				"name": "Email Reply To",
 				"type": "shortText"
+			},
+			{
+				"description": "Phishing Confidence Level score (Microsoft headers)",
+				"name": "Phishing PCL Score",
+				"type": "number"
+			},
+			{
+				"description": "The confidence level, presented as a value between 0 and 1, of the predicted phishing sub-type verdict by the machine-learning model.",
+				"name": "DBotPredictionProbability",
+				"type": "number"
 			},
 			{
 				"description": "",
@@ -260,13 +215,58 @@
 			},
 			{
 				"description": "",
-				"name": "Email URL Clicked",
+				"name": "Email To",
 				"type": "shortText"
 			},
 			{
 				"description": "",
-				"name": "Attachment Count",
-				"type": "number"
+				"name": "Email HTML Image",
+				"type": "longText"
+			},
+			{
+				"description": "",
+				"name": "Email Latest Message",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Email Body HTML",
+				"type": "html"
+			},
+			{
+				"description": "",
+				"name": "Email Return Path",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Email Message ID",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Email Body",
+				"type": "longText"
+			},
+			{
+				"description": "",
+				"name": "Attachment size",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Attachment Name",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Email HTML",
+				"type": "longText"
+			},
+			{
+				"description": "Classification of the email. Can be \"Legitimate\", \"Spam\", or \"Malicious\".",
+				"name": "Email Classification",
+				"type": "singleSelect"
 			}
 		],
 		"incidenttype": [
@@ -289,52 +289,52 @@
 		],
 		"playbook": [
 			{
-				"description": "Add email details to the relevant context entities and handle the case where original emails are attached.\n\nAdded on this v2 playbook:\n- Uses incident fields and not incident labels.\n- Provides separate paths to \"Phishing Alerts\".\n- Uses the new \"Get Original Email - Generic v2\" playbook to retrieve original emails as eml files for both EWS v2 and Microsoft Graph Mail integration. This will assist with parsing the email artifacts in a more efficient way.\n",
-				"name": "Process Email - Generic v2"
-			},
-			{
-				"description": "Use this playbook to retrieve the original email in the thread, including headers and attahcments, when the reporting user forwarded the original email not as an attachment.\n\nYou must have the necessary permissions in the EWS integration to execute global search: eDiscovery",
-				"name": "Get Original Email - EWS"
-			},
-			{
-				"description": "Add email details to the relevant context entities and handle the case where original emails are attached.",
-				"name": "Process Email - Generic"
-			},
-			{
-				"description": "Master playbook for phishing incidents. This playbook is a manual playbook.",
-				"name": "Phishing Playbook - Manual"
-			},
-			{
-				"description": "Use this playbook to retrieve the original email in the thread, including headers and attahcments, when the reporting user forwarded the original email not as an attachment.\n\nYou must have the necessary permissions in your Gmail service to execute global search: Google Apps Domain-Wide Delegation of Authority\n",
-				"name": "Get Original Email - Gmail"
+				"description": "This v2 playbook is being used inside the \"Phishing\" flow. It will retrieve an original mail based on the inputs.\n\nThe inputs in this version are not using any labels and also allow the user to supply an email brand.\n\nYou must have the necessary permissions in your email service to execute global search.\n\n- EWS: eDiscovery\n- Gmail: Google Apps Domain-Wide Delegation of Authority\n- MSGraph: As described here:\n    * https://docs.microsoft.com/en-us/graph/api/message-get\n    * https://docs.microsoft.com/en-us/graph/api/user-list-messages",
+				"name": "Get Original Email - Generic v2"
 			},
 			{
 				"description": "Use this playbook to investigate and remediate a potential phishing incident. The playbook simultaneously engages with the user that triggered the incident, while investigating the incident itself.\n\nThe final remediation tasks are always decided by a human analyst.",
 				"name": "Phishing Investigation - Generic v2"
 			},
 			{
-				"description": "This v2 playbook is being used inside the \"Phishing\" flow. It will retrieve an original mail based on the inputs.\n\nThe inputs in this version are not using any labels and also allow the user to supply an email brand.\n\nYou must have the necessary permissions in your email service to execute global search.\n\n- EWS: eDiscovery\n- Gmail: Google Apps Domain-Wide Delegation of Authority\n- MSGraph: As described here:\n    * https://docs.microsoft.com/en-us/graph/api/message-get\n    * https://docs.microsoft.com/en-us/graph/api/user-list-messages",
-				"name": "Get Original Email - Generic v2"
-			},
-			{
-				"description": "This playbook stores the SCL, BCL and PCL scores (if exists) to the associated incident fields (Phishing SCL Score, Phishing PCL Score, Phishing BCL Score).\nIt also does the following:\n1) Sets the email classification to \"spam\" if the \"SCL\" score is equal or higher than 5.\n2) Sets the incident severity according to the playbook inputs (default is: PCL/BCL - Medium, SCL - Low). The severity of the incident is set only when one (or more) of the following occurs:\n- PCL (Phishing Confidence Level) score is between and including 4-8: The message content is likely to be phishing.\n- BCL (Bulk complaint level) score is between and including 4-7: The message is from a bulk sender that generates a mixed number of complaints. Between and including 8-9: The message is from a bulk sender that generates a high number of complaints.\n- SCL (Spam confidence level) score is between and including 5-6: Spam filtering marked the message as Spam. 9: Spam filtering marked the message as High confidence spam)\n\nFor further information on SCL/BCL/PCL, see the following Microsoft documentation:\n\nhttps://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/spam-confidence-levels?view=o365-worldwide\n\nhttps://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/bulk-complaint-level-values?view=o365-worldwide\n\nhttps://docs.microsoft.com/en-us/exchange/antispam-and-antimalware/antispam-protection/antispam-stamps?view=exchserver-2019",
-				"name": "Process Microsoft's Anti-Spam Headers"
+				"description": "Add email details to the relevant context entities and handle the case where original emails are attached.",
+				"name": "Process Email - Generic"
 			},
 			{
 				"description": "Enrich entities using one or more integrations",
 				"name": "Entity Enrichment - Phishing v2"
 			},
 			{
-				"description": "Add email details to the relevant context entities and handle the case where original emails are attached.",
-				"name": "Process Email - Core"
+				"description": "Master playbook for phishing incidents. This playbook is a manual playbook.",
+				"name": "Phishing Playbook - Manual"
+			},
+			{
+				"description": "Provides a basic response to phishing incidents. Playbook features:\n- Calculates reputation for all indicators\n- Extracts indicators from email attachments\n- Calculates severity for the incident based on indicator reputation\n- Updates reporting user about investigation status\n- Allows manual remediation of the incident",
+				"name": "Phishing - Core"
+			},
+			{
+				"description": "Use this playbook to retrieve the original email in the thread, including headers and attahcments, when the reporting user forwarded the original email not as an attachment.\n\nYou must have the necessary permissions in your Gmail service to execute global search: Google Apps Domain-Wide Delegation of Authority\n",
+				"name": "Get Original Email - Gmail"
+			},
+			{
+				"description": "Use this playbook to retrieve the original email in the thread, including headers and attahcments, when the reporting user forwarded the original email not as an attachment.\n\nYou must have the necessary permissions in the EWS integration to execute global search: eDiscovery",
+				"name": "Get Original Email - EWS"
 			},
 			{
 				"description": "Calculates a severity according to the verdict coming from the CheckEmailAuthenticity script.",
 				"name": "Calculate Severity By Email Authenticity"
 			},
 			{
-				"description": "Provides a basic response to phishing incidents. Playbook features:\n- Calculates reputation for all indicators\n- Extracts indicators from email attachments\n- Calculates severity for the incident based on indicator reputation\n- Updates reporting user about investigation status\n- Allows manual remediation of the incident",
-				"name": "Phishing - Core"
+				"description": "This playbook stores the SCL, BCL and PCL scores (if exists) to the associated incident fields (Phishing SCL Score, Phishing PCL Score, Phishing BCL Score).\nIt also does the following:\n1) Sets the email classification to \"spam\" if the \"SCL\" score is equal or higher than 5.\n2) Sets the incident severity according to the playbook inputs (default is: PCL/BCL - Medium, SCL - Low). The severity of the incident is set only when one (or more) of the following occurs:\n- PCL (Phishing Confidence Level) score is between and including 4-8: The message content is likely to be phishing.\n- BCL (Bulk complaint level) score is between and including 4-7: The message is from a bulk sender that generates a mixed number of complaints. Between and including 8-9: The message is from a bulk sender that generates a high number of complaints.\n- SCL (Spam confidence level) score is between and including 5-6: Spam filtering marked the message as Spam. 9: Spam filtering marked the message as High confidence spam)\n\nFor further information on SCL/BCL/PCL, see the following Microsoft documentation:\n\nhttps://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/spam-confidence-levels?view=o365-worldwide\n\nhttps://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/bulk-complaint-level-values?view=o365-worldwide\n\nhttps://docs.microsoft.com/en-us/exchange/antispam-and-antimalware/antispam-protection/antispam-stamps?view=exchserver-2019",
+				"name": "Process Microsoft's Anti-Spam Headers"
+			},
+			{
+				"description": "Add email details to the relevant context entities and handle the case where original emails are attached.\n\nAdded on this v2 playbook:\n- Uses incident fields and not incident labels.\n- Provides separate paths to \"Phishing Alerts\".\n- Uses the new \"Get Original Email - Generic v2\" playbook to retrieve original emails as eml files for both EWS v2 and Microsoft Graph Mail integration. This will assist with parsing the email artifacts in a more efficient way.\n",
+				"name": "Process Email - Generic v2"
+			},
+			{
+				"description": "Add email details to the relevant context entities and handle the case where original emails are attached.",
+				"name": "Process Email - Core"
 			}
 		],
 		"report": null,
@@ -342,13 +342,13 @@
 		"widget": null
 	},
 	"created": "2020-07-26T19:55:56Z",
-	"currentVersion": "2.5.0",
+	"currentVersion": "2.5.1",
 	"dependencies": {
 		"Base": {
 			"author": "Cortex XSOAR",
 			"certification": "certified",
 			"mandatory": true,
-			"minVersion": "1.14.0",
+			"minVersion": "1.15.4",
 			"name": "Base"
 		},
 		"Campaign": {
@@ -362,28 +362,28 @@
 			"author": "Cortex XSOAR",
 			"certification": "certified",
 			"mandatory": true,
-			"minVersion": "2.0.7",
+			"minVersion": "2.1.1",
 			"name": "Common Playbooks"
 		},
 		"CommonScripts": {
 			"author": "Cortex XSOAR",
 			"certification": "certified",
 			"mandatory": true,
-			"minVersion": "1.5.0",
+			"minVersion": "1.5.5",
 			"name": "Common Scripts"
 		},
 		"CommonTypes": {
 			"author": "Cortex XSOAR",
 			"certification": "certified",
 			"mandatory": true,
-			"minVersion": "3.1.22",
+			"minVersion": "3.1.23",
 			"name": "Common Types"
 		},
 		"EWS": {
 			"author": "Cortex XSOAR",
 			"certification": "certified",
 			"mandatory": false,
-			"minVersion": "1.10.0",
+			"minVersion": "1.10.1",
 			"name": "EWS"
 		},
 		"EWSMailSender": {
@@ -432,13 +432,13 @@
 			"author": "Cortex XSOAR",
 			"certification": "certified",
 			"mandatory": false,
-			"minVersion": "1.0.14",
+			"minVersion": "1.0.15",
 			"name": "Rasterize"
 		}
 	},
 	"deprecated": false,
 	"description": "Phishing emails still hooking your end users? This Content Pack can drastically reduce the time your security team spends on phishing alerts.",
-	"downloads": 10740,
+	"downloads": 11271,
 	"eulaLink": "https://github.com/demisto/content/blob/master/LICENSE",
 	"fromServerVersion": "6.0.0",
 	"general": [
@@ -491,7 +491,7 @@
 			"name": "Gmail"
 		}
 	],
-	"itemVersion": "2.5.0",
+	"itemVersion": "2.5.1",
 	"keywords": [],
 	"legacy": true,
 	"name": "Phishing",
@@ -515,17 +515,17 @@
 		"url": "https://www.paloaltonetworks.com/cortex"
 	},
 	"tags": [
+		"Email",
+		"Scam",
 		"Spam",
 		"Use Case",
-		"Getting Started",
-		"Scam",
-		"Email"
+		"Getting Started"
 	],
 	"toServerVersion": "",
-	"updated": "2021-11-08T09:18:48Z",
+	"updated": "2021-11-16T13:33:29Z",
 	"useCases": [
 		"Phishing"
 	],
 	"version": -1,
-	"versionInfo": "1913264"
+	"versionInfo": "1959372"
 }
