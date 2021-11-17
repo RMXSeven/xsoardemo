@@ -18,7 +18,7 @@
 	"hidden": false,
 	"id": "incident_emailauthenticitycheck",
 	"isReadOnly": false,
-	"itemVersion": "2.5.0",
+	"itemVersion": "2.5.1",
 	"locked": false,
 	"mergeStrategy": "",
 	"name": "Email Authenticity Check",
@@ -34,7 +34,6 @@
 	"runScriptAfterUpdate": false,
 	"script": "",
 	"selectValues": [
-		"",
 		"Pass",
 		"Undetermined",
 		"Suspicious",
