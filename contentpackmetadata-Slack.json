@@ -1,0 +1,318 @@
+{
+	"author": "Cortex XSOAR",
+	"authorImage": "content/packs/Base/Author_image.png",
+	"beta": false,
+	"categories": [
+		"Messaging"
+	],
+	"certification": "certified",
+	"contentItemTypes": [
+		"integration",
+		"automation",
+		"playbook"
+	],
+	"contentItems": {
+		"automation": [
+			{
+				"description": "Sends a message (question) to either user (in a direct message) or to a channel. The message includes predefined reply options. The response can also close a task (might be conditional) in a playbook.",
+				"name": "SlackAsk",
+				"tags": [
+					"slack"
+				]
+			},
+			{
+				"description": "Sends a message (question) to either user (in a direct message) or to a channel. The message includes predefined reply options. The response can also close a task (might be conditional) in a playbook.",
+				"name": "SlackAskV2",
+				"tags": [
+					"slack"
+				]
+			}
+		],
+		"classifier": null,
+		"dashboard": null,
+		"incidentfield": null,
+		"incidenttype": null,
+		"indicatorfield": null,
+		"integration": [
+			{
+				"category": "Messaging",
+				"commands": [
+					{
+						"description": "Mirrors the investigation between Slack and the Demisto War Room.",
+						"name": "mirror-investigation"
+					},
+					{
+						"description": "Sends a message to a user, group, or channel.",
+						"name": "send-notification"
+					},
+					{
+						"description": "Archives a Slack channel.",
+						"name": "close-channel"
+					},
+					{
+						"description": "Sends a file to a user, channel, or group. If not specified, the file is sent to the mirrored investigation channel (if the channel exists).",
+						"name": "slack-send-file"
+					},
+					{
+						"description": "Sets the topic for a channel.",
+						"name": "slack-set-channel-topic"
+					},
+					{
+						"description": "Creates a channel in Slack.",
+						"name": "slack-create-channel"
+					},
+					{
+						"description": "Invites users to join a channel.",
+						"name": "slack-invite-to-channel"
+					},
+					{
+						"description": "Removes users from the specified channel.",
+						"name": "slack-kick-from-channel"
+					},
+					{
+						"description": "Renames a channel in Slack.",
+						"name": "slack-rename-channel"
+					},
+					{
+						"description": "Get details about a specified user.",
+						"name": "slack-get-user-details"
+					},
+					{
+						"description": "Returns the integration context as a file. Use this command for debug purposes only.",
+						"name": "slack-get-integration-context"
+					},
+					{
+						"description": "Pins a selected message to the given channel.",
+						"name": "slack-pin-message"
+					},
+					{
+						"description": "Edit an existing Slack message.",
+						"name": "slack-edit-message"
+					}
+				],
+				"description": "Send messages and notifications to your Slack team.",
+				"name": "Slack v3"
+			},
+			{
+				"category": "Messaging",
+				"commands": [
+					{
+						"description": "Deprecated. Use the \"mirror-investigation\" command instead.",
+						"name": "slack-mirror-investigation"
+					},
+					{
+						"description": "Mirrors the investigation between Slack and the Demisto War Room.",
+						"name": "mirror-investigation"
+					},
+					{
+						"description": "Sends a message to a user, group, or channel.",
+						"name": "send-notification"
+					},
+					{
+						"description": "Deprecated. Use the \"send-notification\" command instead.",
+						"name": "slack-send"
+					},
+					{
+						"description": "Deprecated. Use the \"close-channel\" command instead.",
+						"name": "slack-close-channel"
+					},
+					{
+						"description": "Archives a Slack channel.",
+						"name": "close-channel"
+					},
+					{
+						"description": "Sends a file to a user, channel, or group. If not specified, the file is sent to the mirrored investigation channel (if the channel exists).",
+						"name": "slack-send-file"
+					},
+					{
+						"description": "Sets the topic for a channel.",
+						"name": "slack-set-channel-topic"
+					},
+					{
+						"description": "Creates a channel in Slack.",
+						"name": "slack-create-channel"
+					},
+					{
+						"description": "Invites users to join a channel.",
+						"name": "slack-invite-to-channel"
+					},
+					{
+						"description": "Removes users from the specified channel.",
+						"name": "slack-kick-from-channel"
+					},
+					{
+						"description": "Renames a channel in Slack.",
+						"name": "slack-rename-channel"
+					},
+					{
+						"description": "Get details about a specified user.",
+						"name": "slack-get-user-details"
+					},
+					{
+						"description": "Returns the integration context as a file. Use this command for debug purposes only.",
+						"name": "slack-get-integration-context"
+					},
+					{
+						"description": "Returns a list of channels matching criteria",
+						"name": "slack-filter-channels"
+					}
+				],
+				"description": "Send messages and notifications to your Slack team.",
+				"name": "Slack v2"
+			},
+			{
+				"category": "Identity and Access Management",
+				"commands": [
+					{
+						"description": "Creates a user.",
+						"name": "iam-create-user"
+					},
+					{
+						"description": "Updates an existing user with the data passed in the user-profile argument.",
+						"name": "iam-update-user"
+					},
+					{
+						"description": "Retrieves a single user resource.",
+						"name": "iam-get-user"
+					},
+					{
+						"description": "Disable an active user.",
+						"name": "iam-disable-user"
+					},
+					{
+						"description": "Retrieves a User Profile schema, which holds all of the user fields within the application. Used for outgoing-mapping through the Get Schema option.",
+						"name": "get-mapping-fields"
+					},
+					{
+						"description": "Creates an empty group",
+						"name": "iam-create-group"
+					},
+					{
+						"description": "Retrieves the group information including members",
+						"name": "iam-get-group"
+					},
+					{
+						"description": "Permanently removes a group.",
+						"name": "iam-delete-group"
+					},
+					{
+						"description": "Updates an existing group resource. This command allows individual (or groups of) users to be added or removed from the group with a single operation. A max of 15,000 users can be modified in 1 call",
+						"name": "iam-update-group"
+					}
+				],
+				"description": "Integrate with Slack's services to execute CRUD operations for employee lifecycle processes.",
+				"name": "Slack IAM"
+			}
+		],
+		"layoutscontainer": null,
+		"playbook": [
+			{
+				"description": "Investigates a failed login event. The playbook interacts with the user via the Slack integration, checks whether the logins were a result of the user's attempts or an attack, raises the severity, and expires the user's password according to the user's replies.",
+				"name": "Slack - General Failed Logins v2.1"
+			}
+		],
+		"report": null,
+		"reputation": null,
+		"widget": null
+	},
+	"created": "2020-08-13T11:42:23Z",
+	"currentVersion": "2.2.0",
+	"dependencies": {
+		"Active_Directory_Query": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": false,
+			"minVersion": "1.3.7",
+			"name": "Active Directory Query"
+		},
+		"Base": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.14.0",
+			"name": "Base"
+		},
+		"CommonTypes": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "3.1.20",
+			"name": "Common Types"
+		},
+		"MicrosoftTeams": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": false,
+			"minVersion": "1.1.18",
+			"name": "Microsoft Teams"
+		},
+		"Syslog": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": false,
+			"minVersion": "1.0.5",
+			"name": "Syslog Sender"
+		}
+	},
+	"deprecated": false,
+	"description": "Send messages and notifications to your Slack team.",
+	"downloads": 3528,
+	"eulaLink": "https://github.com/demisto/content/blob/master/LICENSE",
+	"fromServerVersion": "5.0.0",
+	"general": [
+		"generalFieldCertified",
+		"generalFieldByCortexXSOAR",
+		"generalFieldFree",
+		"generalFieldSupportIncluded"
+	],
+	"id": "Slack",
+	"installMessage": "",
+	"integrations": [
+		{
+			"imagePath": "content/packs/Slack/SlackIAM_image.png",
+			"name": "Slack IAM"
+		},
+		{
+			"imagePath": "content/packs/Slack/SlackV2_image.png",
+			"name": "Slack v2"
+		},
+		{
+			"imagePath": "content/packs/Slack/SlackV3_image.png",
+			"name": "Slack v3"
+		},
+		{
+			"imagePath": "content/packs/Active_Directory_Query/ActiveDirectoryQueryv2_image.png",
+			"name": "Active Directory Query v2"
+		}
+	],
+	"itemVersion": "2.2.0",
+	"keywords": [
+		"Slack"
+	],
+	"legacy": true,
+	"name": "Slack",
+	"packID": "Slack",
+	"premium": false,
+	"previewOnly": false,
+	"price": 0,
+	"propagationLabels": [
+		"all"
+	],
+	"rawKeywords": null,
+	"rawTags": null,
+	"rawUseCases": null,
+	"searchRank": 10,
+	"serverMaxVersion": "",
+	"serverMinVersion": "5.0.0",
+	"support": "xsoar",
+	"supportDetails": {
+		"email": "",
+		"url": "https://www.paloaltonetworks.com/cortex"
+	},
+	"tags": [],
+	"toServerVersion": "",
+	"updated": "2021-11-07T11:27:32Z",
+	"useCases": [],
+	"version": -1,
+	"versionInfo": "1909699"
+}
