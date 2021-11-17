@@ -5,13 +5,13 @@ commonfields:
 contentitemexportablefields:
   contentitemfields:
     fromServerVersion: 5.0.0
-    itemVersion: 1.15.4
+    itemVersion: 1.15.5
     packID: Base
     packPropagationLabels:
     - all
     propagationLabels: []
     toServerVersion: ""
-dockerimage: demisto/python:2.7.18.24066
+dockerimage: demisto/python:2.7.18.24398
 engineinfo: {}
 name: CommonServerPython
 pswd: ""
@@ -2126,7 +2126,7 @@ script: |
           st = st.replace('\n', '<br>')  # Unix
 
       if minimal_escaping:
-          for c in '|':
+          for c in ('|', '`'):
               st = st.replace(c, '\\' + c)
       else:
           st = "".join(["\\" + str(c) if c in MARKDOWN_CHARS else str(c) for c in st])
