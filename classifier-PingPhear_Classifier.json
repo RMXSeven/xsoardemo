@@ -1,0 +1,34 @@
+{
+	"brands": null,
+	"defaultIncidentType": "PingPhear",
+	"description": "",
+	"feed": false,
+	"fromServerVersion": "",
+	"id": "e423f0a1-bd39-4759-873a-9e7542b1da3d",
+	"incidentSamples": null,
+	"indicatorSamples": null,
+	"instanceIds": null,
+	"itemVersion": "",
+	"keyTypeMap": {
+		"fw.Ronen.IT.RONENIT": "PingPhear"
+	},
+	"locked": false,
+	"logicalVersion": 1,
+	"mapping": null,
+	"name": "PingPhear Classifier",
+	"nameRaw": "PingPhear Classifier",
+	"packID": "",
+	"propagationLabels": [
+		"all"
+	],
+	"sourceClassifierId": "",
+	"system": false,
+	"toServerVersion": "",
+	"transformer": {
+		"complex": null,
+		"simple": ""
+	},
+	"type": "classification",
+	"unclassifiedCases": null,
+	"version": -1
+}
