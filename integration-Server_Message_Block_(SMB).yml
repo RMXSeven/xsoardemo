@@ -1,0 +1,245 @@
+category: Utilities
+commonfields:
+  id: Server Message Block (SMB)
+  version: -1
+configuration:
+- display: Server IP / Hostname (e.g. 1.2.3.4)
+  name: hostname
+  required: false
+  type: 0
+- defaultvalue: "445"
+  display: Port
+  name: port
+  required: true
+  type: 0
+- display: Server NetBIOS (AD) Name
+  name: nbname
+  required: false
+  type: 0
+- display: Domain
+  name: domain
+  required: false
+  type: 0
+- display: Username
+  name: credentials
+  required: true
+  type: 9
+- defaultvalue: "false"
+  display: Use system proxy settings
+  name: proxy
+  required: false
+  type: 8
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: 5.0.0
+    itemVersion: 2.0.5
+    packID: SMB
+    packPropagationLabels:
+    - all
+    propagationLabels: []
+    toServerVersion: ""
+deprecated: true
+description: Deprecated. Use the Server Message Block (SMB) v2 integration instead.
+detaileddescription: "This integration is for uploading and downloading files from
+  an SMB server.\nFor the configuration, you should either configure server details
+  as parameters, or as command inputs. \n\n---\n[View Integration Documentation](https://xsoar.pan.dev/docs/reference/integrations/server-message-block-smb)"
+display: Server Message Block (SMB) (Deprecated)
+image: data:image/png;base64,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
+name: Server Message Block (SMB)
+script:
+  commands:
+  - arguments:
+    - description: 'Server IP address / hostname, for example: 1.2.3.4.'
+      name: hostname
+    - description: Server NetBIOS (AD) name.
+      name: nbname
+    - description: The host domain
+      name: domain
+    - default: true
+      description: 'The path to the file, starting from the share, for example: Share/Folder/File.'
+      name: file_path
+      required: true
+    - auto: PREDEFINED
+      defaultValue: "yes"
+      description: If "yes", the file is downloaded and attached. If "no", only the
+        output is attached. Default is yes".
+      name: download_and_attach
+      predefined:
+      - "yes"
+      - "no"
+    deprecated: true
+    description: Downloads a file from the SMB server.
+    name: smb-download
+    outputs:
+    - contextPath: File.Size
+      description: File size.
+      type: number
+    - contextPath: File.SHA1
+      description: SHA1 hash of the file.
+      type: string
+    - contextPath: File.SHA256
+      description: SHA256 hash of the file.
+      type: string
+    - contextPath: File.Name
+      description: File name.
+      type: string
+    - contextPath: File.SSDeep
+      description: SSDeep hash of the file.
+      type: string
+    - contextPath: File.EntryID
+      description: File entry ID.
+      type: string
+    - contextPath: File.Info
+      description: Information about the file.
+      type: string
+    - contextPath: File.Type
+      description: File type.
+      type: string
+    - contextPath: File.MD5
+      description: MD5 hash of the file.
+      type: string
+  - arguments:
+    - description: 'Server IP address / hostname, for example: 1.2.3.4.'
+      name: hostname
+    - description: Server NetBIOS (AD) name.
+      name: nbname
+    - description: The host domain
+      name: domain
+    - description: 'The path to the file, starting from the share, for example: Share/Folder/File.'
+      name: file_path
+      required: true
+    - description: EntryID of the file to send to the share.
+      name: entryID
+    - description: File content to send to the share. Ignored if EntryID argument
+        is specified.
+      name: content
+    deprecated: true
+    description: Uploads a file to the SMB server.
+    name: smb-upload
+  dockerimage: demisto/smb:1.0.0.7685
+  runonce: false
+  script: |2
+
+
+
+
+
+    ''' IMPORTS '''
+
+
+    import tempfile
+    from smb.SMBConnection import SMBConnection
+
+    ''' GLOBAL VARS '''
+
+
+    USER = demisto.params()['credentials']['identifier']
+    PASSWORD = demisto.params()['credentials']['password']
+    HOSTNAME = demisto.params()['hostname']
+    PORT = int(demisto.params()['port'])
+    NBNAME = demisto.params()['nbname']
+    DOMAIN = demisto.params().get('domain', None)
+
+
+    ''' HELPER FUNCTIONS '''
+
+
+    def split_path(path):
+        delim = '/' if '/' in path else '\\'
+        path = path.strip(delim)
+        return path.split(delim, 1)
+
+
+    def connect(hostname, domain, user, password, nb_name, port):
+        if not domain:
+            connection = SMBConnection(user, password, 'Demisto', nb_name, is_direct_tcp=True)
+        else:
+            connection = SMBConnection(user, password, 'Demisto', nb_name, domain=domain, is_direct_tcp=True)
+        if not connection.connect(hostname, port):
+            return_error('Authentication failed, verify instance configuration parameters and try again.')
+        return connection
+
+
+    ''' FUNCTIONS '''
+
+
+    def test_module():
+        if HOSTNAME and NBNAME:
+            connection = connect(hostname=HOSTNAME, domain=DOMAIN, user=USER, password=PASSWORD, nb_name=NBNAME, port=PORT)
+            demisto.results('ok')
+            connection.close()
+        else:
+            demisto.results('No hostname or NetBIOS name was configured, cannot perform a connection test.')
+
+
+    def smb_download():
+        share, path = split_path(demisto.getArg('file_path'))
+        hostname = demisto.args().get('hostname') if demisto.args().get('hostname') else HOSTNAME
+        nbname = demisto.args().get('nbname') if demisto.args().get('nbname') else NBNAME
+        domain = demisto.args().get('domain') if demisto.args().get('domain') else DOMAIN
+
+        if not hostname:
+            return_error('No hostname was configured for the integration, cannot establish connection.')
+        elif not nbname:
+            return_error('No NetBIOS name was configured for the integration, cannot establish connection.')
+        connection = connect(hostname=hostname, domain=domain, user=USER, password=PASSWORD, nb_name=nbname, port=PORT)
+        try:
+            with tempfile.NamedTemporaryFile() as file_obj:
+                file_attributes, filesize = connection.retrieveFile(share, path, file_obj)
+                file_obj.seek(0)
+                filename = path.split('/')[-1] if '/' in path else path.split('\\')[-1]
+                if demisto.getArg('download_and_attach') == "yes":
+                    demisto.results(fileResult(filename, file_obj.read()))
+                else:
+                    demisto.results(file_obj.read())
+        finally:
+            connection.close()
+
+
+    def smb_upload():
+        share, path = split_path(demisto.getArg('file_path'))
+        entryID = demisto.getArg('entryID')
+        content = demisto.getArg('content')
+        hostname = demisto.args().get('hostname') if demisto.args().get('hostname') else HOSTNAME
+        nbname = demisto.args().get('nbname') if demisto.args().get('nbname') else NBNAME
+        domain = demisto.args().get('domain') if demisto.args().get('domain') else DOMAIN
+
+        if not hostname:
+            return_error('No hostname was configured for the integration, cannot establish connection.')
+        elif not nbname:
+            return_error('No NetBIOS name was configured for the integration, cannot establish connection.')
+        connection = connect(hostname=hostname, domain=domain, user=USER, password=PASSWORD, nb_name=nbname, port=PORT)
+        try:
+            if not entryID and not content:
+                raise Exception("smb-upload requires one of the following arguments: content, entryID.")
+            if entryID:
+                file = demisto.getFilePath(entryID)
+                filePath = file['path']
+                with open(filePath, mode='rb') as f:
+                    content = f.read()
+
+            with tempfile.NamedTemporaryFile() as file_obj:
+                file_obj.write(content)
+                file_obj.seek(0)
+                file_bytes_transfered = connection.storeFile(share, path, file_obj)
+                demisto.results("Transfered {} bytes of data.".format(file_bytes_transfered))
+        finally:
+            connection.close()
+
+
+    ''' EXECUTION CODE '''
+
+    LOG('command is %s' % (demisto.command(),))
+
+    try:
+        if demisto.command() == 'test-module':
+            test_module()
+        elif demisto.command() == 'smb-download':
+            smb_download()
+        elif demisto.command() == 'smb-upload':
+            smb_upload()
+    except Exception as e:
+        return_error(str(e))
+  subtype: python2
+  type: python
+system: true
