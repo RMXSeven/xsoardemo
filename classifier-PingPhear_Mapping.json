@@ -1,0 +1,174 @@
+{
+	"brands": null,
+	"defaultIncidentType": "",
+	"description": "",
+	"feed": false,
+	"fromServerVersion": "",
+	"id": "721105bb-6740-4677-8758-5dc1d55118fd",
+	"incidentSamples": null,
+	"indicatorSamples": null,
+	"instanceIds": null,
+	"itemVersion": "",
+	"keyTypeMap": {},
+	"locked": false,
+	"logicalVersion": 0,
+	"mapping": {
+		"PingPhear": {
+			"dontMapEventToLabels": true,
+			"internalMapping": {
+				"App": {
+					"complex": {
+						"accessor": "",
+						"filters": [],
+						"root": "content",
+						"transformers": [
+							{
+								"args": {
+									"delimiter": {
+										"isContext": false,
+										"value": {
+											"complex": null,
+											"simple": ","
+										}
+									}
+								},
+								"operator": "split"
+							},
+							{
+								"args": {
+									"index": {
+										"isContext": false,
+										"value": {
+											"complex": null,
+											"simple": "13"
+										}
+									}
+								},
+								"operator": "atIndex"
+							}
+						]
+					},
+					"simple": ""
+				},
+				"Destination IP": {
+					"complex": {
+						"accessor": "",
+						"filters": [],
+						"root": "content",
+						"transformers": [
+							{
+								"args": {
+									"delimiter": {
+										"isContext": false,
+										"value": {
+											"complex": null,
+											"simple": ","
+										}
+									}
+								},
+								"operator": "split"
+							},
+							{
+								"args": {
+									"index": {
+										"isContext": false,
+										"value": {
+											"complex": null,
+											"simple": "9"
+										}
+									}
+								},
+								"operator": "atIndex"
+							}
+						]
+					},
+					"simple": ""
+				},
+				"Rule Name": {
+					"complex": {
+						"accessor": "",
+						"filters": [],
+						"root": "content",
+						"transformers": [
+							{
+								"args": {
+									"delimiter": {
+										"isContext": false,
+										"value": {
+											"complex": null,
+											"simple": ","
+										}
+									}
+								},
+								"operator": "split"
+							},
+							{
+								"args": {
+									"index": {
+										"isContext": false,
+										"value": {
+											"complex": null,
+											"simple": "10"
+										}
+									}
+								},
+								"operator": "atIndex"
+							}
+						]
+					},
+					"simple": ""
+				},
+				"Source IP": {
+					"complex": {
+						"accessor": "",
+						"filters": [],
+						"root": "content",
+						"transformers": [
+							{
+								"args": {
+									"delimiter": {
+										"isContext": false,
+										"value": {
+											"complex": null,
+											"simple": ","
+										}
+									}
+								},
+								"operator": "split"
+							},
+							{
+								"args": {
+									"index": {
+										"isContext": false,
+										"value": {
+											"complex": null,
+											"simple": "6"
+										}
+									}
+								},
+								"operator": "atIndex"
+							}
+						]
+					},
+					"simple": ""
+				}
+			}
+		}
+	},
+	"name": "PingPhear Mapping",
+	"nameRaw": "PingPhear Mapping",
+	"packID": "",
+	"propagationLabels": [
+		"all"
+	],
+	"sourceClassifierId": "",
+	"system": false,
+	"toServerVersion": "",
+	"transformer": {
+		"complex": null,
+		"simple": ""
+	},
+	"type": "mapping-incoming",
+	"unclassifiedCases": null,
+	"version": -1
+}
