@@ -1,0 +1,99 @@
+{
+	"author": "Cortex XSOAR",
+	"authorImage": "content/packs/Base/Author_image.png",
+	"beta": false,
+	"categories": [
+		"Utilities"
+	],
+	"certification": "certified",
+	"contentItemTypes": [
+		"integration"
+	],
+	"contentItems": {
+		"automation": null,
+		"classifier": null,
+		"dashboard": null,
+		"incidentfield": null,
+		"incidenttype": null,
+		"indicatorfield": null,
+		"integration": [
+			{
+				"category": "Utilities",
+				"commands": [
+					{
+						"description": "Returns the coordinates of the given physical address. Only the first result is returned (the most relevant, according to Google Maps).",
+						"name": "google-maps-geocode"
+					}
+				],
+				"description": "Use the Google Maps API.",
+				"name": "Google Maps"
+			}
+		],
+		"layoutscontainer": null,
+		"playbook": null,
+		"report": null,
+		"reputation": null,
+		"widget": null
+	},
+	"created": "2021-06-24T11:06:17Z",
+	"currentVersion": "1.0.3",
+	"dependencies": {
+		"Base": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.13.31",
+			"name": "Base"
+		}
+	},
+	"deprecated": false,
+	"description": "Use the Google Maps Geocoding API",
+	"downloads": 130,
+	"eulaLink": "https://github.com/demisto/content/blob/master/LICENSE",
+	"fromServerVersion": "6.0.0",
+	"general": [
+		"generalFieldCertified",
+		"generalFieldByCortexXSOAR",
+		"generalFieldFree",
+		"generalFieldSupportIncluded"
+	],
+	"id": "GoogleMaps",
+	"installMessage": "",
+	"integrations": [
+		{
+			"imagePath": "content/packs/GoogleMaps/GoogleMaps_image.png",
+			"name": "Google Maps"
+		}
+	],
+	"itemVersion": "1.0.3",
+	"keywords": [],
+	"legacy": true,
+	"name": "Google Maps",
+	"packID": "GoogleMaps",
+	"premium": false,
+	"previewOnly": false,
+	"price": 0,
+	"propagationLabels": [
+		"all"
+	],
+	"rawKeywords": null,
+	"rawTags": null,
+	"rawUseCases": null,
+	"readme": "This pack returns the coordinates of a given physical address. \r\nThe location is marked on a map according to the coordinates (lat, lng), or address.\r\n",
+	"searchRank": 10,
+	"serverMaxVersion": "",
+	"serverMinVersion": "6.0.0",
+	"support": "xsoar",
+	"supportDetails": {
+		"email": "",
+		"url": "https://www.paloaltonetworks.com/cortex"
+	},
+	"tags": [
+		"Trending"
+	],
+	"toServerVersion": "",
+	"updated": "2021-09-16T21:14:09Z",
+	"useCases": [],
+	"version": -1,
+	"versionInfo": "7640590"
+}
