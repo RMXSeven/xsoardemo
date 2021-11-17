@@ -2706,13 +2706,13 @@
 		"widget": null
 	},
 	"created": "2020-07-26T20:01:30Z",
-	"currentVersion": "3.1.23",
+	"currentVersion": "3.1.24",
 	"dependencies": {
 		"Base": {
 			"author": "Cortex XSOAR",
 			"certification": "certified",
 			"mandatory": true,
-			"minVersion": "1.14.1",
+			"minVersion": "1.15.4",
 			"name": "Base"
 		},
 		"CVESearch": {
@@ -2726,14 +2726,14 @@
 			"author": "Cortex XSOAR",
 			"certification": "certified",
 			"mandatory": true,
-			"minVersion": "1.5.1",
+			"minVersion": "1.5.5",
 			"name": "Common Scripts"
 		},
 		"Compliance": {
 			"author": "Cortex XSOAR",
 			"certification": "certified",
 			"mandatory": false,
-			"minVersion": "1.0.8",
+			"minVersion": "1.0.9",
 			"name": "Compliance"
 		},
 		"Malware": {
@@ -2747,7 +2747,7 @@
 			"author": "Cortex XSOAR",
 			"certification": "certified",
 			"mandatory": false,
-			"minVersion": "2.5.0",
+			"minVersion": "2.5.1",
 			"name": "Phishing"
 		},
 		"SplunkPy": {
@@ -2760,7 +2760,7 @@
 	},
 	"deprecated": false,
 	"description": "This Content Pack will get you up and running in no-time and provide you with the most commonly used incident \u0026 indicator fields and types.",
-	"downloads": 23961,
+	"downloads": 24557,
 	"eulaLink": "https://github.com/demisto/content/blob/master/LICENSE",
 	"fromServerVersion": "5.0.0",
 	"general": [
@@ -2781,7 +2781,7 @@
 			"name": "CVE Search v2"
 		}
 	],
-	"itemVersion": "3.1.23",
+	"itemVersion": "3.1.24",
 	"keywords": [],
 	"legacy": true,
 	"name": "Common Types",
@@ -2808,8 +2808,8 @@
 		"Partner Spotlight"
 	],
 	"toServerVersion": "",
-	"updated": "2021-11-10T21:18:10Z",
+	"updated": "2021-11-16T13:36:55Z",
 	"useCases": [],
 	"version": -1,
-	"versionInfo": "1929712"
+	"versionInfo": "1959372"
 }
