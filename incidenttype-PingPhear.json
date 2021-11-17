@@ -1,0 +1,35 @@
+{
+	"autorun": false,
+	"closureScript": "",
+	"color": "#FF8411",
+	"days": 0,
+	"daysR": 0,
+	"default": false,
+	"detached": false,
+	"disabled": false,
+	"extractSettings": {
+		"fieldCliNameToExtractSettings": {},
+		"mode": "Specific"
+	},
+	"fromServerVersion": "",
+	"hours": 0,
+	"hoursR": 0,
+	"id": "PingPhear",
+	"itemVersion": "",
+	"layout": "99c0c1e0-7202-47de-877c-b17d10a101c9",
+	"locked": false,
+	"name": "PingPhear",
+	"onChangeRepAlg": 0,
+	"packID": "",
+	"preProcessingScript": "",
+	"propagationLabels": [
+		"all"
+	],
+	"readonly": false,
+	"reputationCalc": 0,
+	"system": false,
+	"toServerVersion": "",
+	"version": -1,
+	"weeks": 0,
+	"weeksR": 0
+}
