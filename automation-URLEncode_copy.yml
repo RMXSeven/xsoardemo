@@ -2,6 +2,8 @@ args:
 - description: The URL to  encode.
   name: value
   required: true
+- description: just a field to add
+  name: demo
 comment: 'Encodes a URL string by replacing special characters in the string using
   the %xx escape. For example: https://example.com converts to https:%2F%2Fexample.com.'
 commonfields:
@@ -9,13 +11,14 @@ commonfields:
   version: -1
 contentitemexportablefields:
   contentitemfields:
-    fromServerVersion: 5.0.0
-    itemVersion: 1.5.2
+    fromServerVersion: ""
+    itemVersion: ""
     packID: ""
     propagationLabels:
     - all
     toServerVersion: ""
 dockerimage: demisto/python3:3.9.7.24076
+enabled: true
 engineinfo: {}
 name: URLEncode_copy
 pswd: ""
@@ -41,7 +44,6 @@ script: |2
       except Exception as exc:
           return_error(str(exc), error=exc)
 scripttarget: 0
-sourcescripid: URLEncode
 subtype: python3
 tags:
 - transformer
