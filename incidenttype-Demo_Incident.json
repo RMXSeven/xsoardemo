@@ -1,0 +1,41 @@
+{
+	"autorun": false,
+	"closureScript": "",
+	"color": "#E3FF88",
+	"days": 0,
+	"daysR": 0,
+	"default": false,
+	"detached": false,
+	"disabled": false,
+	"extractSettings": {
+		"fieldCliNameToExtractSettings": {
+			"sourceip": {
+				"extractAsIsIndicatorTypeId": "ipRep",
+				"extractIndicatorTypesIDs": [],
+				"isExtractingAllIndicatorTypes": false
+			}
+		},
+		"mode": "Specific"
+	},
+	"fromServerVersion": "",
+	"hours": 0,
+	"hoursR": 0,
+	"id": "Demo Incident",
+	"itemVersion": "",
+	"layout": "",
+	"locked": false,
+	"name": "Demo Incident",
+	"onChangeRepAlg": 0,
+	"packID": "",
+	"preProcessingScript": "",
+	"propagationLabels": [
+		"all"
+	],
+	"readonly": false,
+	"reputationCalc": 0,
+	"system": false,
+	"toServerVersion": "",
+	"version": -1,
+	"weeks": 0,
+	"weeksR": 0
+}
