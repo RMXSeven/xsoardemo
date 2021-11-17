@@ -1046,7 +1046,7 @@
 				"tags": []
 			},
 			{
-				"description": "UnPack a file using fileName or entryID to specify a file. Files unpacked will be pushed to the war room and names will be pushed to the context.\nsupported types are:\n7z (.7z), ACE (.ace), ALZIP (.alz), AR (.a), ARC (.arc), ARJ (.arj), BZIP2 (.bz2), CAB (.cab), compress (.Z), CPIO (.cpio), DEB (.deb), DMS (.dms), GZIP (.gz), LRZIP (.lrz), LZH (.lha, .lzh), LZIP (.lz), LZMA (.lzma), LZOP (.lzo), RPM (.rpm), RAR (.rar), RZIP (.rz), TAR (.tar), XZ (.xz), ZIP (.zip, .jar) and ZOO (.zoo)",
+				"description": "Deprecated. Use the UnzipFile script instead. UnPack a file using fileName or entryID to specify a file. Files unpacked will be pushed to the war room and names will be pushed to the context.\nsupported types are:\n7z (.7z), ACE (.ace), ALZIP (.alz), AR (.a), ARC (.arc), ARJ (.arj), BZIP2 (.bz2), CAB (.cab), compress (.Z), CPIO (.cpio), DEB (.deb), DMS (.dms), GZIP (.gz), LRZIP (.lrz), LZH (.lha, .lzh), LZIP (.lz), LZMA (.lzma), LZOP (.lzo), RPM (.rpm), RAR (.rar), RZIP (.rz), TAR (.tar), XZ (.xz), ZIP (.zip, .jar) and ZOO (.zoo)",
 				"name": "UnPackFile",
 				"tags": [
 					"Utility",
@@ -1789,13 +1789,13 @@
 		"widget": null
 	},
 	"created": "2020-07-27T09:01:37Z",
-	"currentVersion": "1.5.2",
+	"currentVersion": "1.5.5",
 	"dependencies": {
 		"Base": {
 			"author": "Cortex XSOAR",
 			"certification": "certified",
 			"mandatory": true,
-			"minVersion": "1.15.1",
+			"minVersion": "1.15.4",
 			"name": "Base"
 		},
 		"DemistoRESTAPI": {
@@ -1850,7 +1850,7 @@
 	},
 	"deprecated": false,
 	"description": "Frequently used scripts pack.",
-	"downloads": 34418,
+	"downloads": 34931,
 	"eulaLink": "https://github.com/demisto/content/blob/master/LICENSE",
 	"fromServerVersion": "5.0.0",
 	"general": [
@@ -1867,7 +1867,7 @@
 			"name": "Demisto REST API"
 		}
 	],
-	"itemVersion": "1.5.2",
+	"itemVersion": "1.5.5",
 	"keywords": [],
 	"legacy": true,
 	"name": "Common Scripts",
@@ -1890,12 +1890,12 @@
 		"url": "https://www.paloaltonetworks.com/cortex"
 	},
 	"tags": [
-		"Transformer",
-		"Filter"
+		"Filter",
+		"Transformer"
 	],
 	"toServerVersion": "",
-	"updated": "2021-11-12T09:24:46Z",
+	"updated": "2021-11-16T13:32:12Z",
 	"useCases": [],
 	"version": -1,
-	"versionInfo": "1938694"
+	"versionInfo": "1959372"
 }
