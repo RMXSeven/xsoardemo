@@ -268,7 +268,7 @@
 	"formatScript": "UnEscapeURLs",
 	"fromServerVersion": "5.5.0",
 	"id": "urlRep",
-	"itemVersion": "3.1.23",
+	"itemVersion": "3.1.24",
 	"layout": "urlRep",
 	"legacyNames": null,
 	"locked": false,
