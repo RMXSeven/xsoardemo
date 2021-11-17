@@ -515,7 +515,7 @@
 	"hours": 0,
 	"hoursR": 0,
 	"id": "Phishing",
-	"itemVersion": "2.5.0",
+	"itemVersion": "2.5.1",
 	"layout": "Phishing",
 	"locked": false,
 	"name": "Phishing",
