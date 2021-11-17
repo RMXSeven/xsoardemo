@@ -1,0 +1,35 @@
+{
+	"autorun": false,
+	"closureScript": "",
+	"color": "#B1EE95",
+	"days": 0,
+	"daysR": 0,
+	"default": false,
+	"detached": false,
+	"disabled": false,
+	"extractSettings": {
+		"fieldCliNameToExtractSettings": {},
+		"mode": "Specific"
+	},
+	"fromServerVersion": "",
+	"hours": 0,
+	"hoursR": 0,
+	"id": "DNS Incident",
+	"itemVersion": "",
+	"layout": "a3ee49d9-81cb-4d2d-8cc5-31d8e14cb016",
+	"locked": false,
+	"name": "DNS Incident",
+	"onChangeRepAlg": 0,
+	"packID": "",
+	"preProcessingScript": "",
+	"propagationLabels": [
+		"all"
+	],
+	"readonly": false,
+	"reputationCalc": 0,
+	"system": false,
+	"toServerVersion": "",
+	"version": -1,
+	"weeks": 0,
+	"weeksR": 0
+}
