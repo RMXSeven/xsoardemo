@@ -44,7 +44,7 @@
 	"hidden": false,
 	"id": "incident_emailheaders",
 	"isReadOnly": false,
-	"itemVersion": "2.5.0",
+	"itemVersion": "2.5.1",
 	"locked": false,
 	"mergeStrategy": "",
 	"name": "Email Headers",
