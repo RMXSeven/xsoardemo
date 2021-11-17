@@ -1,0 +1,36 @@
+{
+	"autorun": false,
+	"closureScript": "",
+	"color": "#FF979A",
+	"days": 0,
+	"daysR": 0,
+	"default": false,
+	"detached": false,
+	"disabled": false,
+	"extractSettings": {
+		"fieldCliNameToExtractSettings": {},
+		"mode": "Specific"
+	},
+	"fromServerVersion": "",
+	"hours": 0,
+	"hoursR": 0,
+	"id": "Tweet Question",
+	"itemVersion": "",
+	"layout": "",
+	"locked": false,
+	"name": "Tweet Question",
+	"onChangeRepAlg": 0,
+	"packID": "",
+	"playbookId": "2c3ea55f-1959-40da-8a68-e07b54d6767d",
+	"preProcessingScript": "",
+	"propagationLabels": [
+		"all"
+	],
+	"readonly": false,
+	"reputationCalc": 0,
+	"system": false,
+	"toServerVersion": "",
+	"version": -1,
+	"weeks": 0,
+	"weeksR": 0
+}
