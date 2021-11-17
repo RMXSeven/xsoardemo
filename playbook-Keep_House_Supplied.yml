@@ -1,0 +1,302 @@
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 0d30aada-68db-42af-8c80-b237aeb1148f
+inputs: []
+name: Keep House Supplied
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: d9aa4ad1-42e9-4f94-83b0-eb00ae3e3d73
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: d9aa4ad1-42e9-4f94-83b0-eb00ae3e3d73
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 50
+        }
+      }
+  "1":
+    form:
+      description: ""
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: What groceries are required
+        options: []
+        optionsarg: []
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: shortText
+      sender: ""
+      title: Groceries
+      totalanswers: 0
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body:
+        simple: What groceries do you need?
+      cc: null
+      format: ""
+      methods: []
+      subject: null
+      timings:
+        completeafterreplies: 1
+        retriescount: 2
+        retriesinterval: 360
+      to: null
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    sla:
+      days: 0
+      hours: 1
+      weeks: 0
+    task:
+      brand: ""
+      id: dce3a7f6-9971-4741-86d0-cd7c1087ef06
+      iscommand: false
+      name: Check Current Supply Levels
+      type: collection
+      version: -1
+    taskid: dce3a7f6-9971-4741-86d0-cd7c1087ef06
+    timertriggers: []
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 195
+        }
+      }
+  "2":
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 78a52449-63cd-40d1-86f8-20a80dcdec0d
+      iscommand: false
+      name: choose person to drive to store
+      type: title
+      version: -1
+    taskid: 78a52449-63cd-40d1-86f8-20a80dcdec0d
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 480
+        }
+      }
+  "3":
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "5"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 2657ff49-1e1b-48aa-8ea3-2102738fcd4d
+      iscommand: false
+      name: drive to store
+      type: title
+      version: -1
+    taskid: 2657ff49-1e1b-48aa-8ea3-2102738fcd4d
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 620
+        }
+      }
+  "4":
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      body:
+        simple: ${Groceries.Answers.0}
+      password:
+        simple: '{TOMMED}saqAlFUgkDwJCizyBkttzhFK981DO0f5NvhU3JbKGdsj4uqIjDkrvDCenI2msheoNh8dVamDMoiowpahEtaDi7vOk2oLgGtEOc6WFEWJ++c='
+      url:
+        simple: https://mygroceryshop.com/order.aspx
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Sends http request. Returns the response as json.
+      id: 57dca4db-5b9a-434f-8f37-c75ddd76dac4
+      iscommand: false
+      name: purchase required groceries online with click-and-collect
+      script: http
+      type: regular
+      version: -1
+    taskid: 57dca4db-5b9a-434f-8f37-c75ddd76dac4
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 350
+        }
+      }
+  "5":
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: ca8bca07-5aaf-4d9e-8817-abc7e62fdfb8
+      iscommand: false
+      name: drive home
+      type: title
+      version: -1
+    taskid: ca8bca07-5aaf-4d9e-8817-abc7e62fdfb8
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 775
+        }
+      }
+  "6":
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "7"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 09d19f3a-2481-4bd3-8f32-4506c00b468f
+      iscommand: false
+      name: put away groceries
+      type: title
+      version: -1
+    taskid: 09d19f3a-2481-4bd3-8f32-4506c00b468f
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 920
+        }
+      }
+  "7":
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 76eca3c0-2ec1-4942-8287-1e217fe58bcb
+      iscommand: false
+      name: end playbook
+      type: title
+      version: -1
+    taskid: 76eca3c0-2ec1-4942-8287-1e217fe58bcb
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 1065
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 1080,
+        "width": 380,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
