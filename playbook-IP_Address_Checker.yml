@@ -1,0 +1,276 @@
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 78e84f2f-f760-4946-8b62-b196fce05e06
+inputs: []
+name: IP Address Checker
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 41ff37c4-df43-4593-8d94-66f39f118e2f
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 41ff37c4-df43-4593-8d94-66f39f118e2f
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 50
+        }
+      }
+  "1":
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 5147678a-18a0-497b-8cfc-657811edfe9b
+      iscommand: false
+      name: End Playbook
+      type: title
+      version: -1
+    taskid: 5147678a-18a0-497b-8cfc-657811edfe9b
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 720
+        }
+      }
+  "2":
+    form:
+      description: What IP address would you like to check
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: Please enter IP addresss
+        options: []
+        optionsarg: []
+        placeholder: ""
+        readonly: false
+        required: true
+        tooltip: ""
+        type: shortText
+      sender: Your SOC team
+      title: IPs
+      totalanswers: 0
+    formDisplay:
+      bodybackgroundcolor: ""
+      bodyfontcolor: ""
+      headerbackgroundcolor: ""
+      headerfontcolor: ""
+      isexternalrtl: false
+      sender: ""
+      submitbuttonbackgroundcolor: ""
+      submitbuttonfontcolor: ""
+      submittext: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body:
+        simple: Lets check some IP addresses
+      cc: null
+      format: ""
+      methods: []
+      subject: null
+      timings:
+        completeafterreplies: 1
+        retriescount: 2
+        retriesinterval: 360
+      to: null
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 8538c50b-ad3d-47b5-80ec-971fbdb1be19
+      iscommand: false
+      name: Gather IP address
+      type: collection
+      version: -1
+    taskid: 8538c50b-ad3d-47b5-80ec-971fbdb1be19
+    timertriggers: []
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 195
+        }
+      }
+  "3":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: "0"
+                root: IPs.Answers
+                transformers:
+                - operator: Stringify
+          operator: isEqualString
+          right:
+            value:
+              simple: 192.168.1.20
+      label: "yes"
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "6"
+      "yes":
+      - "4"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: c5330eb5-8a57-4ee1-85b3-530e33fecfa7
+      iscommand: false
+      name: Is it one of ours?
+      type: condition
+      version: -1
+    taskid: c5330eb5-8a57-4ee1-85b3-530e33fecfa7
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 370
+        }
+      }
+  "4":
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: IsItOurs
+      stringify:
+        simple: "true"
+      value:
+        simple: "true"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: a5804b57-1feb-475c-84fb-f559b3501a4f
+      iscommand: false
+      name: Write It's Ours to context
+      script: Set
+      type: regular
+      version: -1
+    taskid: a5804b57-1feb-475c-84fb-f559b3501a4f
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 545
+        }
+      }
+  "6":
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: IsItOurs
+      stringify:
+        simple: "true"
+      value:
+        simple: "false"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: c9c1744c-8454-4a8f-8991-d189236fb051
+      iscommand: false
+      name: Write false to context
+      script: Set
+      type: regular
+      version: -1
+    taskid: c9c1744c-8454-4a8f-8991-d189236fb051
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 545
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 735,
+        "width": 810,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
