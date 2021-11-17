@@ -30,7 +30,7 @@ commonfields:
 contentitemexportablefields:
   contentitemfields:
     fromServerVersion: 5.0.0
-    itemVersion: 1.5.2
+    itemVersion: 1.5.5
     packID: CommonScripts
     packPropagationLabels:
     - all
