@@ -1,0 +1,400 @@
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 2c3ea55f-1959-40da-8a68-e07b54d6767d
+inputs: []
+name: Twitter Gather Questions
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "9"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: a45d877e-d3e8-4ce3-89d4-534296179b23
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: a45d877e-d3e8-4ce3-89d4-534296179b23
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": -90
+        }
+      }
+  "1":
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      count:
+        simple: "1"
+      q:
+        simple: ' '
+      to_user:
+        simple: Question4Ronen
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Twitter
+      description: Search for tweets on Twitter.
+      id: 2c2ed773-adab-4fe2-82f6-1c1952eccd42
+      iscommand: true
+      name: twitter-get-tweets
+      script: Twitter|||twitter-get-tweets
+      type: regular
+      version: -1
+    taskid: 2c2ed773-adab-4fe2-82f6-1c1952eccd42
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 195
+        }
+      }
+  "2":
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      content:
+        simple: '${Twitter.Tweet Text}         '
+      file_path:
+        simple: XSOAR-SMB/question.txt
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Server Message Block (SMB) v2
+      description: Uploads a file to the server.
+      id: 520bd473-ad82-46a7-8d08-73f23b2d0a76
+      iscommand: true
+      name: smb-upload-new-question
+      script: Server Message Block (SMB) v2|||smb-upload
+      type: regular
+      version: -1
+    taskid: 520bd473-ad82-46a7-8d08-73f23b2d0a76
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 545
+        }
+      }
+  "3":
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 5a05c421-f60d-4990-8517-f41487b84bca
+      iscommand: false
+      name: End Playbook
+      type: title
+      version: -1
+    taskid: 5a05c421-f60d-4990-8517-f41487b84bca
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 1490
+        }
+      }
+  "4":
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "7"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      seconds:
+        simple: "10"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Sleep for X seconds
+      id: 1afc9840-0b12-4934-8fd8-ce4e5ec53b82
+      iscommand: false
+      name: Delay 10 seconds
+      script: Sleep
+      type: regular
+      version: -1
+    taskid: 1afc9840-0b12-4934-8fd8-ce4e5ec53b82
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 720
+        }
+      }
+  "5":
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "8"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      file_path:
+        simple: XSOAR-SMB/question.txt
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Server Message Block (SMB) v2
+      description: Removes a file from the server.
+      id: e2533b79-a5fa-43a3-805f-eb15c8d22ac1
+      iscommand: true
+      name: smb-file-remove
+      script: Server Message Block (SMB) v2|||smb-file-remove
+      type: regular
+      version: -1
+    taskid: e2533b79-a5fa-43a3-805f-eb15c8d22ac1
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 1070
+        }
+      }
+  "6":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                root: twitterpostid
+          operator: isNotEqualString
+          right:
+            iscontext: true
+            value:
+              complex:
+                accessor: Post ID
+                root: Twitter
+                transformers:
+                - args:
+                    from:
+                      value:
+                        simple: "5"
+                    to: {}
+                  operator: substring
+      label: New Question
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 8ebee303-13dc-422e-8ed1-161e190f690f
+      iscommand: false
+      name: Is this a new question?
+      type: condition
+      version: -1
+    taskid: 8ebee303-13dc-422e-8ed1-161e190f690f
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": -420,
+          "y": 370
+        }
+      }
+  "7":
+    fieldMapping:
+    - incidentfield: Twitter Post ID
+      output:
+        complex:
+          accessor: Post ID
+          root: Twitter.[0]
+          transformers:
+          - operator: Stringify
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "5"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: twitterpostid
+      value:
+        complex:
+          accessor: Post ID
+          root: Twitter
+          transformers:
+          - args:
+              from:
+                value:
+                  simple: "5"
+              to: {}
+            operator: substring
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: c67557d1-473d-48af-8b5b-fb8379f10242
+      iscommand: false
+      name: Update Last Question Post ID
+      script: Set
+      type: regular
+      version: -1
+    taskid: c67557d1-473d-48af-8b5b-fb8379f10242
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 895
+        }
+      }
+  "8":
+    id: "8"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      all:
+        simple: "no"
+      index:
+        simple: "0"
+      key:
+        simple: Twitter
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Delete field from context
+      id: 2915647c-415e-4d74-8756-89d7c3fc5aff
+      iscommand: false
+      name: DeleteTweetDeets
+      script: DeleteContext
+      type: regular
+      version: -1
+    taskid: 2915647c-415e-4d74-8756-89d7c3fc5aff
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 1280
+        }
+      }
+  "9":
+    id: "9"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      all:
+        simple: "no"
+      index:
+        simple: "0"
+      key:
+        simple: Twitter
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Delete field from context
+      id: d86a6efa-b5c6-4ec9-8ba2-e41547e30ba4
+      iscommand: false
+      name: DeleteTweetDeets
+      script: DeleteContext
+      type: regular
+      version: -1
+    taskid: d86a6efa-b5c6-4ec9-8ba2-e41547e30ba4
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 35
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 1645,
+        "width": 850,
+        "x": -420,
+        "y": -90
+      }
+    }
+  }
