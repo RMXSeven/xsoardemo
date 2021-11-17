@@ -57,7 +57,7 @@
 	"formatScript": "ExtractEmailV2",
 	"fromServerVersion": "5.0.0",
 	"id": "emailRep",
-	"itemVersion": "3.1.23",
+	"itemVersion": "3.1.24",
 	"layout": "emailRep",
 	"legacyNames": null,
 	"locked": false,
