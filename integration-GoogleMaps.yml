@@ -1,0 +1,220 @@
+category: Utilities
+commonfields:
+  id: GoogleMaps
+  version: -1
+configuration:
+- additionalinfo: The API key to use for the connection.
+  display: Google Maps API Key
+  displaypassword: API Key
+  hiddenusername: true
+  name: api_key
+  required: true
+  type: 9
+- display: Raise error an empty result
+  name: error_on_no_results
+  required: false
+  type: 8
+- display: Trust any certificate (not secure)
+  name: insecure
+  required: false
+  type: 8
+- defaultvalue: https://maps.googleapis.com/maps/api/
+  display: Base URL
+  name: base_url
+  required: true
+  type: 0
+- display: Use system proxy settings
+  name: proxy
+  required: false
+  type: 8
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: 6.0.0
+    itemVersion: 1.0.3
+    packID: GoogleMaps
+    packPropagationLabels:
+    - all
+    propagationLabels: []
+    toServerVersion: ""
+description: Use the Google Maps API.
+detaileddescription: |-
+  Use the Google Maps Geocoding API.
+  See [Google's API Documentation](https://developers.google.com/maps/documentation/geocoding/overview).
+
+  For information about Google's API Key requirements and pricing, see [here](https://developers.google.com/maps/documentation/geocoding/get-api-key).
+
+
+  ---
+  [View Integration Documentation](https://xsoar.pan.dev/docs/reference/integrations/google-maps)
+display: Google Maps
+image: data:image/png;base64,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
+name: GoogleMaps
+script:
+  commands:
+  - arguments:
+    - default: true
+      description: The physical address to be geocoded.
+      name: search_address
+      required: true
+    description: Returns the coordinates of the given physical address. Only the first
+      result is returned (the most relevant, according to Google Maps).
+    name: google-maps-geocode
+    outputs:
+    - contextPath: GoogleMaps.lat
+      description: Latitude of the provided location.
+      type: Number
+    - contextPath: GoogleMaps.lng
+      description: Longitude of the provided location
+      type: Number
+    - contextPath: GoogleMaps.SearchAddress
+      description: The address provided as input
+      type: String
+    - contextPath: GoogleMaps.Address
+      description: The address provided by Google Maps for the provided location
+      type: String
+    - contextPath: GoogleMaps.Country
+      description: The country or region where the provided location is, according
+        to Google Maps.
+      type: String
+  dockerimage: demisto/python3:3.9.7.24076
+  runonce: false
+  script: |2
+
+
+
+    OUTPUTS_PREFIX = 'GoogleMaps'
+
+    STATUS_OK = 'OK'
+    STATUS_ZERO_RESULTS = 'ZERO_RESULTS'
+
+    MESSAGE_ZERO_RESULTS = 'No matching places were found.'
+
+    # Disable insecure warnings
+    requests.packages.urllib3.disable_warnings()  # pylint: disable=no-member
+
+
+    class Client(BaseClient):
+        def __init__(self, api_key: str, base_url: str, proxy: bool, insecure: bool):
+            """
+            Client to use in the GoogleMaps integration. Uses BaseClient
+            """
+            super().__init__(base_url=base_url,
+                             verify=not insecure,
+                             proxy=proxy)
+            self.api_key = api_key
+
+        def http_request(self, params: Dict):
+            return self._http_request(method='GET',
+                                      url_suffix='geocode/json?',
+                                      params={**params,
+                                              'key': self.api_key})
+
+        def google_maps_geocode(self, search_address: str) -> dict:
+            return self.http_request(params={'address': search_address})
+
+
+    def google_maps_geocode_command(client: Client, search_address: str, error_on_no_results: bool) -> List[CommandResults]:
+        response = client.google_maps_geocode(search_address)
+
+        status = demisto.get(response, 'status')
+        if status == STATUS_OK:
+            return parse_response(response, search_address)
+
+        elif status == STATUS_ZERO_RESULTS:
+            if error_on_no_results:
+                raise DemistoException(message=MESSAGE_ZERO_RESULTS, res=response)
+            return [CommandResults(readable_output=MESSAGE_ZERO_RESULTS)]
+
+        else:
+            error_message = demisto.get(response, 'error_message') or ''
+            raise DemistoException(message=error_message, res=response)
+
+
+    def test_module(client: Client) -> str:
+        """Tests GoogleMaps by geocoding a specific address"""
+        google_maps_geocode_command(client, '45 Rothschild, Tel Aviv', True)
+        return 'ok'  # on any failure, an exception is raised
+
+
+    def parse_response(response: Dict, search_address: str) -> List[CommandResults]:
+        """ Parses Google Maps API to a list of CommandResult objects """
+        first_result = (response.get('results') or [])[0]
+
+        coordinate_dict = demisto.get(first_result, 'geometry.location')
+        response_address = demisto.get(first_result, 'formatted_address')
+
+        country = None
+        for component in first_result['address_components']:
+            if 'country' in (demisto.get(component, 'types') or []):
+                country = demisto.get(component, 'long_name')
+                break
+
+        note_outputs = {'SearchAddress': search_address,
+                        'Address': response_address,
+                        'Country': country,
+                        **coordinate_dict}
+
+        # noinspection PyTypeChecker
+        readable_output = tableToMarkdown(name='Geocoding Results',
+                                          t=note_outputs,
+                                          headers=list(note_outputs.keys()),
+                                          headerTransform=pascalToSpace)
+
+        result_note = CommandResults(outputs_prefix=OUTPUTS_PREFIX,
+                                     outputs_key_field=['lat', 'lng'],
+                                     outputs=note_outputs,
+                                     readable_output=readable_output,
+                                     entry_type=EntryType.NOTE,
+                                     raw_response=response)
+
+        result_map = CommandResults(entry_type=EntryType.MAP_ENTRY_TYPE,
+                                    raw_response=coordinate_dict)
+
+        return [result_note, result_map]
+
+
+    def main():
+        params = demisto.params()
+        args = demisto.args()
+        command = demisto.command()
+
+        proxy = demisto.get(params, 'proxy') or False
+        base_url = demisto.get(params, 'base_url') or 'https://maps.googleapis.com/maps/api/'
+        api_key = demisto.get(params, 'api_key.password') or ''
+        insecure = demisto.get(params, 'insecure') or False
+        error_on_no_results = demisto.get(params, 'error_on_no_results') or False
+
+        demisto.debug(f'Command being called is {command}')
+
+        try:
+            client = Client(base_url=base_url, api_key=api_key, proxy=proxy, insecure=insecure)
+
+            if command == 'test-module':
+                return_results(test_module(client))
+
+            elif command == 'google-maps-geocode':
+                return_results(google_maps_geocode_command(client=client,
+                                                           error_on_no_results=error_on_no_results,
+                                                           **args))
+
+            else:
+                raise NotImplementedError(f"command '{command}' is not supported")
+
+        except Exception as e:
+            demisto.error(traceback.format_exc())  # prints the traceback
+
+            error_parts = [f'Failed to execute the {command} command.',
+                           'Error:',
+                           str(e)]
+
+            if isinstance(e, DemistoException):
+                error_parts.extend(('Raw response:', str(e.res)))  # pylint: disable=E1101
+
+            return_error('\n'.join(error_parts))
+
+
+    if __name__ in ('__main__', '__builtin__', 'builtins'):
+        main()
+  subtype: python3
+  type: python
+system: true
